@@ -1,0 +1,88 @@
+@import "bootstrap/scss/bootstrap";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$dark-blue: #4D5C93;
+$light-blue: #7488C3;
+$gray: #B8B7D1;
+$yellow: #FFCB5C;
+$red: #FF6E61;
+$white: #FFFFFF;
+$black: #000000;
+
+li{
+    list-style: none;
+  
+}
+footer{
+    background-color: #4D5C93;
+    display: flex;
+    flex-direction: column;
+    color:#FFFFFF;
+
+    .secciones-footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+    }
+    .copy-right{
+        color:#FFFFFF;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo-footer{
+            width: 80px;
+        }
+    }
+    .icon-footer{
+        display: flex;
+
+        .icon-list{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+
+            i{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i{
+    color: #FFFFFF;
+}
+
+@media (min-width: 700px){
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+}
