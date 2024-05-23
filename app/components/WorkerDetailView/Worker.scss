@@ -7,18 +7,31 @@
 
     .photo-worker{
         border-radius: 100%;
-        width: 400px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        -webkit-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+        -moz-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+        box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+
     }
 }
 
 .work-experience{
-    display: flex;
-    text-align: justify;
-    text-align-last: center;
-    line-height: 1.5; 
-    margin-left: 60px;
-    margin-right: 60px;     
-}
+            display: flex;
+            text-align: justify;
+            text-align-last: center;
+            line-height: 1.5; 
+            width: 80%;    
+        }
+        .stars-rating{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 400px;
+           
+            
+        }
 
 .worker-qualification{
     display: flex;
@@ -26,45 +39,45 @@
     flex-direction: row;
     align-items: center;
 
-        .photo-worker-qualification{
-            border-radius: 100%;
-            width: 80px;
-        
-        }
+            .container-name-stars-neighborhood{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
 
+                    .bxs-star{
+                        display: flex;
+                        color:#FFCB5C;
+                        background-color: none;
+                        font-size: 25px;
+                    }
 
-    .container-name-stars-neighborhood{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+                        .contact{
+                            border: none;
+                            width: 150px;
+                            height: 50px;
+                            background-color:#7488C3;
+                            border-radius: 10px;
+                            -webkit-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                            -moz-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                            box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                        }
+                            
+                            a{
+                                text-decoration: none;
+                                color: #000000;
+                            }
+
     }
-    
-        .stars-rating{
+    @media (min-width: 700px){
+        .work-experience{
             display: flex;
-            justify-content: center;
-            align-items:center;
-            width: 300px;
-            
-        }
+            text-align: justify;
+            text-align-last: center;
+            line-height: 1.5; 
+            width: 40%;    
 
-        .bxs-star{
-            display: flex;
-            color:#FFCB5C;
         }
-
-        .contact{
-            border: none;
-            width: 100px;
-            height: 40px;
-            background-color:#7488C3;
-            border-radius: 10px;
-            box-shadow: #000000;
-        }
-        a{
-            text-decoration: none;
-            color: #000000;
-        }
-
     }

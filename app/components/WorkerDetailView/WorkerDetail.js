@@ -22,16 +22,9 @@ export function workerDetail() {
 </p>
 </div>
 <div class="worker-qualification">
-<!-- <figure class="photo-worker-qualification">
-  <img
-    class="photo-worker-qualification"
-    src="https://media.istockphoto.com/id/1346124841/es/foto/pensamiento-exitoso-del-trabajador-del-sitio-de-construcci%C3%B3n.jpg?s=612x612&w=0&k=20&c=aNZUadteECWp2tzIWt_RQPInVvzqNkMyAtfrneVTX3k="
-    alt=""
-  />
-</figure> -->
 <div class="container-name-stars-neighborhood">
   <h3 class="name-worker-qualification">Rafael González</h3>
-  <p class="worker-neighborhood">Buenos aíres</p>
+  <p class="worker-neighborhood">Buenos aires</p>
   <div class="stars-rating">
     <i class="bx bxs-star"></i>
     <i class="bx bxs-star"></i>
@@ -39,7 +32,7 @@ export function workerDetail() {
     <i class="bx bxs-star"></i>
     <i class="bx bxs-star"></i>
   </div>
-  <span class="worker-service-price">$50.000</span>
+  <h3 class="worker-service-price">$50.000</h3>
   <button class="contact"><a href="">Contactar</a></button>
 </div>
 </div>
