@@ -1,4 +1,5 @@
 import { Footer } from "./components/Footer/footer";
+import { FormWorker } from "./components/FormWorker/FormWorker";
 
 export const Router = () => {
     let {hash} = location;
@@ -6,6 +7,6 @@ export const Router = () => {
     main.innerHTML = ` `;
 
     if(hash == "" || hash == "#/"){
-        main.append(Footer())
+        main.append(FormWorker());
     }
 }

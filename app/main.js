@@ -6,4 +6,4 @@ import { App } from "./App";
 import * as bootstrap from "bootstrap";
 
 document.addEventListener("DOMContentLoaded", App);
-window.addEventListener("hashchange", App);
+window.addEventListener("hashchange", App)
