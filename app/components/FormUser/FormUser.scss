@@ -1,0 +1,118 @@
+@import "/src/scss/style.scss";
+
+.form-section{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    .user-subtitle{
+        color: $gray-form;
+        margin-bottom: 30px;
+    }
+
+    .user-form{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .pcView-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .inputUser-container{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+    
+                .input-user{
+                    width: 100%;
+                    height: 43px;
+                    padding: 0 10px;
+                    border: solid 1px  $gray-form;
+                    border-radius: 10px;
+                }
+
+                #neighborhood-user{
+                    width: 100%;
+                    height: 43px;
+                    padding: 0 10px;
+                    border: solid 1px $gray-form;
+                    border-radius: 10px;
+                }
+        }
+        .inputUser-container{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .input-user{
+                width: 100%;
+                height: 43px;
+                padding: 0 10px;
+                border: solid 1px $gray-form;
+                border-radius: 10px;
+            }
+
+            .file-user{
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .userFile-button{
+                width: 100%;
+                height: 43px;
+                border: none;
+                border-radius: 10px;
+                background-color: $dark-blue;
+                color: $white;
+            }
+
+            #description-user{
+                width: 100%;
+                height: 100px;
+                resize: none;
+                padding: 15px 10px;
+                border: solid 1px $gray-form;
+                border-radius: 10px;
+            }
+        }
+    }
+    .buttonSendUser-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sendUser-button{
+        width: 100px;
+        height: 35px;
+        background-color: $dark-blue;
+        color: $white;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+@media (min-width: 768px){
+    .form-section{
+        width: 85%;
+        margin: 0 auto;
+
+        .user-form{
+            .pcView-container{
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                
+                .inputUser-container{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
