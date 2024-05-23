@@ -1,0 +1,32 @@
+.contenedor-header{
+    background-color: #4D5C93;
+    
+}
+li{
+    list-style: none;
+  
+}
+
+.a-header{
+    text-decoration: none !important;
+    color:#FFFFFF;
+}
+
+.items{
+    color:#FFFFFF;
+    
+}
+
+.a-header-home{
+    color: #FFFFFF;
+    text-decoration:underline;
+    
+}
+
+
+
+@media (max-width: 991.9px){
+    .navegador{
+       background-color: #FFFFFF;
+    }
+}
