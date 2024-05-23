@@ -1,3 +1,5 @@
+import "./Header.scss"
+
 export function Header() {
     const header = document.querySelector("header")
 
