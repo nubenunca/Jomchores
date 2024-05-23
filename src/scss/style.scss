@@ -1,6 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 @import url(/app/components/Footer/footer.scss);
-@import url(/app/components/WorkerDetailView/Worker.scss);
+@import url(/app/components/WorkerDetailView/WorkerDetailView.scss);
 
 *{
     margin: 0;
@@ -15,5 +15,4 @@ $yellow: #FFCB5C;
 $red: #FF6E61;
 $white: #FFFFFF;
 $black: #000000;
-$gray-form: #828282;
-
+$gray-form: #828282

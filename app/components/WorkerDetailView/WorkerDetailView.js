@@ -1,5 +1,5 @@
-export function workerDetail() {
-  const detailWorker = document.querySelector(".worker-detail");
+export const WorkerDetailView = () => {
+  const detailWorker = document.createElement("worker-detail");
 
   detailWorker.innerHTML = `
 <div class="worker-container">
@@ -23,18 +23,11 @@ export function workerDetail() {
 </div>
 <div class="worker-qualification">
 <div class="container-name-stars-neighborhood">
-  <h3 class="name-worker-qualification">Rafael González</h3>
   <p class="worker-neighborhood">Buenos aires</p>
-  <div class="stars-rating">
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-  </div>
   <h3 class="worker-service-price">$50.000</h3>
   <button class="contact"><a href="">Contactar</a></button>
 </div>
 </div>
 `;
-}
+  return detailWorker;
+};
