@@ -1,4 +1,5 @@
 import { FormWorker } from "./components/FormWorker/FormWorker";
+import { AboutUs } from "./components/AboutUs/AboutUs";
 
 export const Router = () => {
   let { hash } = location;
@@ -8,6 +9,8 @@ export const Router = () => {
   if (hash == "" || hash == "#/") {
     main.append(FormWorker());
   } else if (hash == "#/vista-aliado") {
-    main.append(workDetailView);
+    main.append(workDetailView());
+  } else if (hash == "#/abaut-us") {
+    main.append(AboutUs());
   }
 };
