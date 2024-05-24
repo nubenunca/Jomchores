@@ -6,14 +6,14 @@
     .card-container{
         width: 300px;
         height: 370px;
-        background-color: $lavander-gray;
+        background-color: $dark-blue;
         cursor: pointer;
         position: relative;
         
         .worker-title{
             margin: 0;
             padding: 15px;
-            color: $ship-cove;
+            color: $white;
             font-weight: bold;
         }
     
@@ -32,7 +32,7 @@
             padding: 15px;
     
             .occupation-description{
-                color: white;
+                color: $white;
                 font-size: 18px;
                 margin: 0;
             }
@@ -43,7 +43,7 @@
             width: 90px;
             height: 28px;
             background-color: $white;
-            color: $ship-cove;
+            color: $black;
             justify-content: center;
             align-items: center;
             font-weight: bold;
