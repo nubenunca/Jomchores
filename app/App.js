@@ -9,7 +9,6 @@ export const App = () => {
 
   divRoot.append(Header());
   divRoot.append(Main());
-  divRoot.append(WorkerDetailView());
   divRoot.append(Footer());
   Router();
 };
