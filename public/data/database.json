@@ -1,0 +1,58 @@
+{
+    "services": [
+        {
+            "id": "1",
+            "image": "../public/img/electrician.webp",
+            "title": "Electricistas",
+            "description": "Confía en nuestros electricistas para resolver tus problemas eléctricos de manera rápida y segura.",
+            "callToAction": "Necesito un electricista"
+        },
+        {
+            "id": "1",
+            "image": "../public/img/plumber.webp",
+            "title": "Plomeros",
+            "description": "Soluciones de plomería garantizadas con respuesta inmediata. ¡Agenda tu servicio ahora!",
+            "callToAction": "Necesito un plomero"
+        },
+        {
+            "id": "3",
+            "image": "../public/img/constructor.webp",
+            "title": "Constructores",
+            "description": "Transforma tus ideas en realidad con nuestros servicios de construcción personalizados.",
+            "callToAction": "Necesito un constructor"
+        },
+        {
+            "id": "4",
+            "image": "../public/img/appliance-repairman.webp",
+            "title": "Reparador de electrodomésticos",
+            "description": "Servicio experto en reparación de electrodomésticos, garantizado y rápido.",
+            "callToAction": "Necesito un reparador"
+        }
+    ],
+    "comments": [
+        {
+            "id": "1",
+            "image": "../public/img/profilepic1.webp",
+            "name": "Carlos",
+            "comment": "¡Excelente servicio! El técnico llegó puntual, identificó el problema rápidamente y lo solucionó de manera eficiente. Muy profesional y a un precio razonable. Definitivamente los recomendaré a mis amigos y familiares."
+        },
+        {
+            "id": "1",
+            "image": "../public/img/profilepic2.webp",
+            "name": "Pedro",
+            "comment": "¡Increíble experiencia! Llamé por la mañana y tenían una cita disponible para la tarde del mismo día. El maestro llegó a tiempo, fue muy profesional y pudo arreglar mi pared de inmediato. ¡Definitivamente los recomendaré a todos mis conocidos!"
+        },
+        {
+            "id": "3",
+            "image": "../public/img/profilepic3.webp",
+            "name": "Veronica",
+            "comment": "Estoy muy impresionada con la calidad del servicio. El técnico fue muy amable y conocedor, y pudo resolver el problema con mi electrodoméstico en poco tiempo. ¡Definitivamente volveré a llamarlos si tengo algún otro problema en el futuro!"
+        },
+        {
+            "id": "4",
+            "image": "../public/img/profilepic4.webp",
+            "name": "Marcela",
+            "comment": "Estoy extremadamente satisfecha con el servicio recibido. El técnico fue muy educado y explicó claramente el problema y las opciones de reparación. Además, el precio fue justo y el trabajo se completó de manera rápida y eficiente. ¡Altamente recomendado!"
+        }
+    ]
+}
