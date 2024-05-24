@@ -7,5 +7,7 @@ export const Router = () => {
 
   if (hash == "" || hash == "#/") {
     main.append(FormWorker());
+  } else if (hash == "#/vista-aliado") {
+    main.append(workDetailView);
   }
 };
