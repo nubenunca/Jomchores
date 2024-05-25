@@ -1,5 +1,7 @@
 import "./FormWorker.scss"
 
+//Worker registration form
+
 export const FormWorker = () => {
 
     let section = document.createElement("section");

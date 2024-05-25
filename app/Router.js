@@ -3,6 +3,8 @@ import { FormWorker } from "./components/FormWorker/FormWorker";
 import { globalMain } from "./components/Home/Home";
 import { createUser, createWorker } from "./js/formFunctions";
 
+// Path file, according to the path each component is rendered.
+
 export const Router = () => {
   let { hash } = location;
   let main = document.querySelector("main");
@@ -14,6 +16,7 @@ export const Router = () => {
   if (hash == "" || hash == "#/") {
     main.append(FormWorker());
 
+    // The values of the workers form inputs are obtained
     const form = document.querySelector(".worker-form");
     const nameWorker = document.querySelector("#name-worker");
     const lastNameWorker = document.querySelector("#lastName-worker");
@@ -30,6 +33,7 @@ export const Router = () => {
     const priceWorker = document.querySelector("#price-worker");
     const profilePictureWorker = document.querySelector("#profilePicture-worker")
 
+    //An event listener is added to send data to the database. 
     form.addEventListener("submit", (event) =>{
       event.preventDefault();
       createWorker (nameWorker, lastNameWorker,emailWorker,usernameWorker,passwordWorker,phoneWorker,addressWorker,neighborhoodWorker,idWorker,categoryWorker,descriptionWorker,priceWorker,profilePictureWorker,urlWorkers);
@@ -43,6 +47,7 @@ export const Router = () => {
   else if (hash == "#/registro"){
     main.append(FormUser())
 
+    // The values of the users form inputs are obtained
     const form = document.querySelector(".user-form");
     const nameUser = document.querySelector("#name-user");
     const lastNameUser = document.querySelector("#lastName-user");
@@ -56,6 +61,7 @@ export const Router = () => {
     const idUser = document.querySelector("#id-user");
     const profilePictureUser = document.querySelector("#profilePicture-user")
 
+    //An event listener is added to send data to the database. 
     form.addEventListener("submit", (event) =>{
       event.preventDefault();
       createUser (nameUser, lastNameUser,emailUser,usernameUser,passwordUser,phoneUser,addressUser,neighborhoodUser,idUser,profilePictureUser,urlUsers);

@@ -1,3 +1,5 @@
+
+//Function in which information from the form is collected and sent to the workers database.
 export async function createWorker (name, lastName, email, username, password, phone, address, neighborhood, id, category, workDescription, cost,img, url){
 
     const newWorker = {
@@ -16,6 +18,7 @@ export async function createWorker (name, lastName, email, username, password, p
         img: img.value
     } 
 
+    //The information is sent to the database.
     await fetch(url,{
         method: 'POST',
         headers: {
@@ -25,6 +28,7 @@ export async function createWorker (name, lastName, email, username, password, p
     })
 }
 
+//Function in which information from the form is collected and sent to the Users database.
 export async function createUser (name, lastName, email, username, password, phone, address, neighborhood, id,img, url){
 
     const newUser = {
@@ -40,6 +44,7 @@ export async function createUser (name, lastName, email, username, password, pho
         img: img.value
     } 
 
+    //The information is sent to the database.
     await fetch(url,{
         method: 'POST',
         headers: {

@@ -1,5 +1,6 @@
 import "./FormUser.scss"
 
+//User registration form
 export const FormUser = () => {
 
     let section = document.createElement("section");
