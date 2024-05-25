@@ -113,7 +113,7 @@ export const FormUser = () => {
 
                 <div class="inputUser-container">
                     <label for="profilePicture-user">Foto de perfil</label>
-                    <input name=profilePicture-user" id=profilePicture-user" type="url" class = "input-user" placeholder = "URL " required>
+                    <input name=profilePicture-user" id="profilePicture-user" type="url" class = "input-user" placeholder = "URL " required>
                 </div>
             </div>
 
