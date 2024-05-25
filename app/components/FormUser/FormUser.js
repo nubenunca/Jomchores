@@ -113,8 +113,7 @@ export const FormUser = () => {
 
                 <div class="inputUser-container">
                     <label for="profilePicture-user">Foto de perfil</label>
-                    <input name="profilePicture-user" id="profilePicture-user" class = "file-user" type="file" accept="image/*" required>
-                    <button type="button" class="userFile-button" onclick = "document.getElementById('profilePicture-user').click()">Seleccionar archivo</button>
+                    <input name=profilePicture-user" id=profilePicture-user" type="url" class = "input-user" placeholder = "URL " required>
                 </div>
             </div>
 

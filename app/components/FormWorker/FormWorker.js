@@ -128,31 +128,23 @@ export const FormWorker = () => {
 
                 <div class="inputWorker-container">
                     <label for="profilePicture-worker">Foto de perfil</label>
-                    <input name="profilePicture-worker" id="profilePicture-worker" class = "file-worker" type="file" accept="image/*" required>
-                    <button type="button" class="workerFile-button" onclick = "document.getElementById('profilePicture-worker').click()">Seleccionar archivo</button>
+                    <input name="profilePicture-worker" id="profilePicture-worker" type="url" class = "input-worker" placeholder = "URL" required>
                 </div>
 
                 
             </div>
 
-            <div class = "pcView-container">
-                <div class="inputWorker-container">
-                    <label for="coverPicture-worker">Foto de portada</label>
-                    <input name="coverPicture-worker" id="coverPicture-worker" class = "file-worker" type="file" accept="image/*" required>
-                    <button type="button" class="workerFile-button" onclick = "document.getElementById('coverPicture-worker').click()">Seleccionar archivo</button>
-                </div>
-
-                <div class="inputWorker-container">
-                    <label for="category-worker">Categoría</label>
-                    <select name="category-worker" id="category-worker" class = "input-worker" required>
-                        <option disabled selected ></option>
-                        <option value="plomeria">Plomería</option>
-                        <option value="aseo">Aseo</option>
-                        <option value="peluqueria">Peluquería</option>
-                        <option value="construccion">Construcción</option>
-                    </select>
-                </div>
+            <div class="inputWorker-container">
+                <label for="category-worker">Categoría</label>
+                <select name="category-worker" id="category-worker" class = "input-worker" required>
+                    <option disabled selected ></option>
+                    <option value="plomeria">Plomería</option>
+                    <option value="aseo">Aseo</option>
+                    <option value="peluqueria">Peluquería</option>
+                    <option value="construccion">Construcción</option>
+                </select>
             </div>
+
             
             <div class="inputWorker-container">
                 <label for="description-worker">Descripción del trabajo</label>

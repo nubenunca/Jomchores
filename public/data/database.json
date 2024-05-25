@@ -54,5 +54,22 @@
             "name": "Marcela",
             "comment": "Estoy extremadamente satisfecha con el servicio recibido. El técnico fue muy educado y explicó claramente el problema y las opciones de reparación. Además, el precio fue justo y el trabajo se completó de manera rápida y eficiente. ¡Altamente recomendado!"
         }
+    ],
+    "wokers": [
+        {
+            "name": "Rafael",
+            "lastName": "Gonzalez",
+            "email": "rafael@jomchores.com",
+            "username": "rafagonza",
+            "password": "123",
+            "phone": "3202146890",
+            "address": "cra 22 #33-120",
+            "neighborhood": "Buenos Aires",
+            "id": "123456789",
+            "category": "plomeria",
+            "workDescription": "Especialista en tuberias",
+            "cost": "50000",
+            "img": "http://localhost:5173/2eca94bb-065f-4549-bbc8-b1d4b9001831"
+        }
     ]
 }

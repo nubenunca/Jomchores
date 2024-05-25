@@ -1,3 +1,4 @@
+import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
 import { globalMain } from "./components/Home/Home";
 
@@ -12,5 +13,8 @@ export const Router = () => {
     main.append(workDetailView);
   }else if (hash == "#/home") {
     main.append(globalMain());
+  }
+  else if (hash == "#/registro"){
+    main.append(FormUser())
   }
 };
