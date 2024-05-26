@@ -26,7 +26,7 @@ function createSection() {
 const section = main.appendChild(createSection());
 
 async function createCardService() {
-    const response = await fetch("http://localhost:3000/services");
+    const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/get_services");
     const data = await response.json();
     section.innerHTML = "";
     data.forEach(service => {
