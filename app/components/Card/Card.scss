@@ -62,13 +62,13 @@
 }
 
 .title-services{
-    font-weight: bold;
-    color: $dark-blue;
+    font-weight: bold !important;
+    color: $dark-blue !important;
 }
 
 .btn-service{
-    background-color: $light-blue; 
-    color: $white;
-    width: 25%;
-    
+    background-color: $light-blue !important; 
+    color: $white !important;
+    width: 25% !important;
+   
 }

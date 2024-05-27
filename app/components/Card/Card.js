@@ -63,13 +63,13 @@ function titles(){
    
  
     section.innerHTML += `
-    <h1 class="title-services h1 text-capitalize display-3 text-center text-bold " >servicios</h1>
+    <h1 class="title-services h1 text-capitalize display-3 text-center text-bold ">servicios</h1>
     <div class="d-grid gap-2 m-3 d-flex flex-wrap gap-2 justify-content-center ">
-      <button class="btn btn-service fs-4" type="button">Plomeria</button>
-      <button class="btn btn-service fs-4"" type="button">Aseo</button>
-      <button class="btn btn-service fs-4"" type="button">Peluqueria</button>
-      <button class="btn btn-service fs-4"" type="button">Construcción</button>
-      <button class="btn btn-service fs-4"" type="button">Electricidad</button>
+      <button class="btn btn-service fs-4" type="button">plomeria</button>
+      <button class="btn btn-service fs-4" type="button">Aseo</button>
+      <button class="btn btn-service fs-4" type="button">Peluqueria</button>
+      <button class="btn btn-service fs-4" type="button">Construcción</button>
+      <button class="btn btn-service fs-4" type="button">Electricidad</button>
     </div>
     
     `
@@ -89,13 +89,13 @@ const sectionTwo = main.appendChild(createCards())
 
 async function createCardWorker() {
 const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers");
-const data = await response.json();
-section.innerHTML = "";
+const data = await response.json(); 
+sectionTwo.innerHTML = "";
 data.forEach(worker => {
 
-    section.innerHTML+=`
+    sectionTwo.innerHTML+=`
     <div class = "card-container" style="width:18rem"> 
-        <h4 class = "worker-title">${worker.name} ${worker.lastName}</h4>
+        <h4 class = "worker-title text-capitalize">${worker.name} ${worker.lastName}</h4>
         <article class="img-container">
             <img src= ${worker.img} alt="">
         </article>
