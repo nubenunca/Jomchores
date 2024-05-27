@@ -7,7 +7,8 @@ import { AboutUs } from "./components/AboutUs/AboutUs";
 
 export const App = () => {
   const divRoot = document.querySelector("#root");
-  divRoot.innerHTML = "";
+
+  divRoot.innerHTML = ` `
   divRoot.append(Header());
   divRoot.append(Main());
   divRoot.append(Footer());
