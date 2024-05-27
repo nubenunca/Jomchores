@@ -7,12 +7,13 @@ footer{
     background-color: #4D5C93;
     display: flex;
     flex-direction: column;
-    color:#FFFFFF;
+    margin-bottom: 0;
 
     .secciones-footer{
         display: flex;
         flex-direction: column;
         padding-left: 20px;
+
 
         a{
             text-decoration: none;

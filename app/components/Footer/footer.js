@@ -1,6 +1,9 @@
 export function Footer() {
   const footer = document.createElement("footer");
-  footer.setAttribute("class", "d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top")
+  footer.setAttribute(
+    "class",
+    "d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top "
+  );
 
   footer.innerHTML = ` 
  <div class="secciones-footer">
@@ -15,7 +18,7 @@ export function Footer() {
     src="./public/img/logo transparente blanco+.png"
     alt="logo-img"
   />
-  <p class="copy-footer">2024 Company, Inc</p>
+  <p class="copy-footer"> &copy; 2024 Jomchores, todos los derechos reservados</p>
 </div>
 
 <div class="icon-footer">
@@ -33,6 +36,6 @@ export function Footer() {
     </li>
   </ul>
 </div>
-`
-return footer
+`;
+  return footer;
 }

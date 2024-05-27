@@ -1,9 +1,9 @@
-import "./Header.scss"
+import "./Header.scss";
 
 export function Header() {
-    const header = document.createElement("header")
+  const header = document.createElement("header");
 
-    header.innerHTML = `
+  header.innerHTML = `
 
     <section class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
@@ -42,6 +42,6 @@ export function Header() {
     </nav>      
     </section>
 
-`
-return header
+`;
+  return header;
 }
