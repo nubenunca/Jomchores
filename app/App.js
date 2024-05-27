@@ -7,6 +7,7 @@ import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView
 export const App = () => {
   const divRoot = document.querySelector("#root");
 
+  divRoot.innerHTML = ` `
   divRoot.append(Header());
   divRoot.append(Main());
   divRoot.append(Footer());

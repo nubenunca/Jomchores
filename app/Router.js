@@ -15,14 +15,10 @@ export const Router = () => {
   main.innerHTML = " ";
 
   if (hash == "" || hash == "#/") {
-    main.append(FormWorker());
-    addWorker()
-
-
-  } else if (hash == "#/vista-aliado") {
-    main.append(workDetailView);
-  }else if (hash == "#/home") {
     main.append(globalMain());
+  
+  } else if(hash == "#/quienes-somos"){
+    main.append()
   }
   else if (hash == "#/registro"){
     main.append(FormUser())
@@ -46,7 +42,11 @@ export const Router = () => {
       event.preventDefault();
       createUser (nameUser, lastNameUser,emailUser,usernameUser,passwordUser,phoneUser,addressUser,neighborhoodUser,idUser,profilePictureUser,urlUsers);
   })
-
+  } else if (hash == "#/trabajo-con-nosotros"){
+    main.append(FormWorker());
+    addWorker()
+  } else{
+    main.append(workDetailView());
   }
   
 };
