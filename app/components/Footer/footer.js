@@ -4,10 +4,10 @@ export function Footer() {
 
   footer.innerHTML = ` 
  <div class="secciones-footer">
-    <a href="#">¿Quiénes somos?</a>
+    <a href="#/quienes-somos">¿Quiénes somos?</a>
     <a href="#">Servicios</a>
-    <a href="#">Regístrate</a>
-    <a href="#">Trabaja con nosotros</a>
+    <a href="#/registro">Regístrate</a>
+    <a href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
 </div>
 <div class="copy-right">
   <img
