@@ -1,4 +1,5 @@
 import { AboutUs } from "./components/AboutUs/AboutUs";
+import { serviceCards } from "./components/Card/Card";
 import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
 import { globalMain } from "./components/Home/Home";
@@ -18,6 +19,8 @@ export const Router = () => {
     main.append(globalMain());
   } else if (hash == "#/quienes-somos") {
     main.append(AboutUs());
+  }  else if (hash == "#/servicios") {
+    main.append(serviceCards());
   } else if (hash == "#/registro") {
     main.append(FormUser());
 
@@ -55,7 +58,7 @@ export const Router = () => {
   } else if (hash == "#/trabajo-con-nosotros") {
     main.append(FormWorker());
     addWorker();
-  } else {
+  } else if(hash == "#/trabajo") {
     main.append(workDetailView());
   }
 };
