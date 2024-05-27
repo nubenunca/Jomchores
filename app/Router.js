@@ -1,7 +1,8 @@
 import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
 import { globalMain } from "./components/Home/Home";
-import { createUser, createWorker } from "./js/formFunctions";
+import { addWorker } from "./js/formFunctions";
+
 
 // Path file, according to the path each component is rendered.
 
@@ -15,29 +16,8 @@ export const Router = () => {
 
   if (hash == "" || hash == "#/") {
     main.append(FormWorker());
+    addWorker()
 
-    // The values of the workers form inputs are obtained
-    const form = document.querySelector(".worker-form");
-    const nameWorker = document.querySelector("#name-worker");
-    const lastNameWorker = document.querySelector("#lastName-worker");
-    const emailWorker = document.querySelector("#email-worker");
-    const usernameWorker = document.querySelector("#userName-worker");
-    const passwordWorker = document.querySelector("#password-worker");
-    const verifyPasswordWorker = document.querySelector("#verifyPassword-worker");
-    const phoneWorker = document.querySelector("#phone-worker");
-    const addressWorker = document.querySelector("#address-worker");
-    const neighborhoodWorker = document.querySelector("#neighborhood-worker");
-    const idWorker = document.querySelector("#id-worker");
-    const categoryWorker = document.querySelector("#category-worker");
-    const descriptionWorker = document.querySelector("#description-worker");
-    const priceWorker = document.querySelector("#price-worker");
-    const profilePictureWorker = document.querySelector("#profilePicture-worker")
-
-    //An event listener is added to send data to the database. 
-    form.addEventListener("submit", (event) =>{
-      event.preventDefault();
-      createWorker (nameWorker, lastNameWorker,emailWorker,usernameWorker,passwordWorker,phoneWorker,addressWorker,neighborhoodWorker,idWorker,categoryWorker,descriptionWorker,priceWorker,profilePictureWorker,urlWorkers);
-  })
 
   } else if (hash == "#/vista-aliado") {
     main.append(workDetailView);

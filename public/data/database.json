@@ -55,7 +55,7 @@
       "comment": "Estoy extremadamente satisfecha con el servicio recibido. El técnico fue muy educado y explicó claramente el problema y las opciones de reparación. Además, el precio fue justo y el trabajo se completó de manera rápida y eficiente. ¡Altamente recomendado!"
     }
   ],
-  "wokers": [
+  "workers": [
     {
       "name": "Rafael",
       "lastName": "Gonzalez",
@@ -85,6 +85,36 @@
       "workDescription": "Aseo a casas",
       "cost": "20000",
       "img": "https://www.misionservir.com/wp-content/uploads/2023/06/buena-presentacion-personal-servicio-de-aseo-oficinas.jpg"
+    },
+    {
+      "id": "09776432",
+      "name": "santiago",
+      "lastName": "suarez",
+      "email": "santiagosuarez@hotmail.com",
+      "username": "santi",
+      "password": "U2FsdGVkX1/Ii5FwoBA4GTbw3mUScaCHQioxaLJ3Uds=",
+      "phone": "987543",
+      "address": "cra",
+      "neighborhood": "La América",
+      "category": "aseo",
+      "workDescription": "Aseo a casas y negocios ",
+      "cost": "40000",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMZuGJYw4B7fK9q-C409ap0L5eOTKGy_KFJthn6rcfw&s"
+    },
+    {
+      "id": "2347689",
+      "name": "Lucho ",
+      "lastName": "Rubio",
+      "email": "luisrubio@gmail.com",
+      "username": "luis",
+      "password": "U2FsdGVkX1+OXMQdp1lWXlqQD+CdFL4bmMgohU6tjzQ=",
+      "phone": "08765432",
+      "address": "cra",
+      "neighborhood": "Laureles Estadio",
+      "category": "peluqueria",
+      "workDescription": "sfdsgregtre",
+      "cost": "40000",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMZuGJYw4B7fK9q-C409ap0L5eOTKGy_KFJthn6rcfw&s"
     }
   ],
   "users": [
