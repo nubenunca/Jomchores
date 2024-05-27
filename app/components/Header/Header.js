@@ -1,11 +1,11 @@
 import "./Header.scss"
 
 export function Header() {
-    const header = document.querySelector("header")
+    const header = document.createElement("header")
 
     header.innerHTML = `
 
-    <header class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <section class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
         <img class="logo-header" src="./public/img/logo transparente blanco+.png" alt="logo-Jomchores">
@@ -39,11 +39,9 @@ export function Header() {
         </ul>
         </div>
       </div>
-    </nav>
+    </nav>      
+    </section>
 
-      
-    </header>
- 
-
-
-`}
+`
+return header
+}

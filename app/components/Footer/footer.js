@@ -1,5 +1,6 @@
-export function footer() {
-  const footer = document.querySelector("footer");
+export function Footer() {
+  const footer = document.createElement("footer");
+  footer.setAttribute("class", "d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top")
 
   footer.innerHTML = ` 
  <div class="secciones-footer">
@@ -32,5 +33,6 @@ export function footer() {
     </li>
   </ul>
 </div>
-`;
+`
+return footer
 }
