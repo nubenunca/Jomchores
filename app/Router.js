@@ -58,7 +58,7 @@ export const Router = () => {
   } else if (hash == "#/trabajo-con-nosotros") {
     main.append(FormWorker());
     addWorker();
-  } else {
+  } else if(hash == "#/trabajo") {
     main.append(workDetailView());
   }
 };

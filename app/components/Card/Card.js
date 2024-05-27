@@ -65,7 +65,7 @@ function titles(){
     section.innerHTML += `
     <h1 class="title-services h1 text-capitalize display-3 text-center text-bold ">servicios</h1>
     <div class="d-grid gap-2 m-3 d-flex flex-wrap gap-2 justify-content-center ">
-      <button class="btn btn-service fs-4" type="button">plomeria</button>
+      <button class="btn btn-service fs-4" type="button">Plomeria</button>
       <button class="btn btn-service fs-4" type="button">Aseo</button>
       <button class="btn btn-service fs-4" type="button">Peluqueria</button>
       <button class="btn btn-service fs-4" type="button">Construcción</button>
