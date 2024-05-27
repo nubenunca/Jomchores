@@ -113,6 +113,7 @@ export function encPass(password){
     return encrypted;
 }
 
+
 // Function to add the worker to the data base.
 export async function createWorker (name, lastName, email, username, password, phone, address, neighborhood, id, category, workDescription, cost,img, url){
 
@@ -200,9 +201,21 @@ export function addWorker(){
         if(checkPassword && checkPasswordSecurity && checkEmail && checkUsername && checkephone && checkId){
             const encryptedPassword = encPass(passwordWorker)
             createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url);
-            alert("Se agrego usuario")
+            form.reset()
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "El trabajador se agrego exitosamente",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }else{
-            alert("No se pudo crear")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "No se pudo registrar, revisa nuevamente los datos",
+                footer: '<a href="#">Why do I have this issue?</a>'
+              });
         }
         
 
