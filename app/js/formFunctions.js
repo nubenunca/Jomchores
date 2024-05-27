@@ -31,7 +31,7 @@ async function validateInformationWarning (key,inputInformation, url, span, name
         const data = await response.json();
 
         const filterData = data.filter(worker => (
-            worker.key == inputInformation
+            worker[key] == inputInformation.value
         ));
 
         if(filterData.length === 0){
@@ -50,8 +50,9 @@ async function validateInformation(key,inputInformation, url){
         const data = await response.json();
 
         const filterData = data.filter(worker => (
-            worker.key == inputInformation
+            worker[key] == inputInformation.value
         ));
+
 
     if(filterData.length === 0){
         return true
@@ -131,7 +132,6 @@ export async function createWorker (name, lastName, email, username, password, p
         img: img.value
     } 
 
-    console.log(newWorker);
 
     await fetch(url,{
         method: 'POST',
@@ -182,9 +182,9 @@ export function addWorker(){
     validatePasswordsWarning(passwordWorker,verifyPasswordWorker,passwordCoincidence);
     passwordSecurityWarning (passwordWorker, passwordSpan);
     validateInformationWarning ("email", emailWorker, url,emailWorkerSpan, "correo electronico")
-    validateInformation ("username", usernameWorker, url,usernameWorkerSpan, "nombre de usuario")
-    validateInformation ("phone", phoneWorker, url,phoneWorkerSpan, "número de celular")
-    validateInformation ("id", idWorker, url,idWorkerSpan, "El numero de cedula")
+    // validateInformation ("username", usernameWorker, url,usernameWorkerSpan, "nombre de usuario")
+    // validateInformation ("phone", phoneWorker, url,phoneWorkerSpan, "número de celular")
+    // validateInformation ("id", idWorker, url,idWorkerSpan, "El numero de cedula")
 
     form.addEventListener("submit", async(event)=>{
         event.preventDefault();
@@ -192,18 +192,18 @@ export function addWorker(){
         const checkPasswordSecurity = passwordSecurity (passwordWorker);
         const checkEmail = await validateInformation ("email", emailWorker, url)
         const checkUsername = await validateInformation ("username", usernameWorker, url)
-        const checkephoneUsername = await validateInformation ("phone", phoneWorker, url)
-        const checkIdUsername = await validateInformation ("id", idWorker, url)
+        const checkephone = await validateInformation ("phone", phoneWorker, url)
+        const checkId= await validateInformation ("id", idWorker, url)
 
-        console.log(checkPassword,checkPasswordSecurity, checkEmail, checkUsername, checkephoneUsername, checkIdUsername);
         const encryptedPassword = encPass(passwordWorker)
         createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url)
-        // if(checkPassword && checkPasswordSecurity && checkEmail && checkUsername && checkephoneUsername && checkIdUsername){
-        //     const encryptedPassword = encPass(passwordWorker)
-        //     createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url)
-        // }else{
-        //     alert("No se pudo crear")
-        // }
+        if(checkPassword && checkPasswordSecurity && checkEmail && checkUsername && checkephone && checkId){
+            const encryptedPassword = encPass(passwordWorker)
+            createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url);
+            alert("Se agrego usuario")
+        }else{
+            alert("No se pudo crear")
+        }
         
 
     })
