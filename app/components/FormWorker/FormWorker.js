@@ -29,11 +29,13 @@ export const FormWorker = () => {
                 <div class="inputWorker-container">
                     <label for="email-worker">Correo electrónico</label>
                     <input name="email-worker" id="email-worker" type="email" class = "input-worker" placeholder = "rafael@jomchores.com" required>
+                    <span class="email-security"></span>
                 </div>
 
                 <div class="inputWorker-container">
                     <label for="userName-worker">Nombre de usuario</label>
                     <input name="userName-worker" id="userName-worker" type="text" class = "input-worker" placeholder = "rafagonza" required>
+                    <span class="username-security"></span>
                 </div>
             </div>
 
@@ -41,11 +43,13 @@ export const FormWorker = () => {
                 <div class="inputWorker-container">
                     <label for="password-worker">Contraseña</label>
                     <input name="password-worker" id="password-worker" type="password" class = "input-worker" placeholder = "Contraseña" required>
+                    <span class="password-security"></span>
                 </div>
 
                 <div class="inputWorker-container">
                     <label for="verifyPassword-worker">Ingrese nuevamente la contraseña</label>
                     <input name="verifyPassword-worker" id="verifyPassword-worker" type="password" class = "input-worker" placeholder = "Contraseña" required>
+                    <span class="password-coincidence"></span>
                 </div>
             </div>
             
@@ -53,6 +57,7 @@ export const FormWorker = () => {
                 <div class="inputWorker-container">
                     <label for="phone-worker">Celular</label>
                     <input name="phone-worker" id="phone-worker" type="tel" class = "input-worker" placeholder = "3202146890" required>
+                    <span class="phone-security"></span>
                 </div>
 
                 <div class="inputWorker-container">
@@ -64,7 +69,8 @@ export const FormWorker = () => {
             <div class = "pcView-container">
                 <div class="inputWorker-container">
                     <label for="id-worker">Número de cedúla</label>
-                    <input name="id-worker" id="id-worker" type="number" class = "input-worker" placeholder = "1234567890 " required>
+                    <input name="id-worker" id="id-worker" type="number" class = "input-worker" placeholder = "123456789" required>
+                    <span class="id-security"></span>
                 </div>
                 
                 <div class="inputWorker-container">
@@ -110,13 +116,13 @@ export const FormWorker = () => {
                 <div class="inputWorker-container">
                     <label for="certifications-worker">Certificaciones (opcional)</label>
                     <input name="certifications-worker" id="certifications-worker" class = "file-worker" type="file">
-                    <button type="button" class="workerFile-button" onclick = "document.getElementById('certifications-worker').click()">Seleccionar archivo</button>
+                    <button type="button" id="certifications-workerButton" class="workerFile-button" onclick = "document.getElementById('certifications-worker').click()">Seleccionar archivo</button>
                 </div>
                 
                 <div class="inputWorker-container">
                     <label for="idDocument-worker">Subir cedúla</label>
                     <input name="idDocument-worker" id="idDocument-worker" class = "file-worker" type="file" required>
-                    <button type="button" class="workerFile-button" onclick = "document.getElementById('idDocument-worker').click()" >Seleccionar archivo</button>
+                    <button type="button" id="idDocument-workerButton" class="workerFile-button" onclick = "document.getElementById('idDocument-worker').click()" >Seleccionar archivo</button>
                 </div>
                 
             </div>
@@ -125,7 +131,7 @@ export const FormWorker = () => {
                 <div class="inputWorker-container">
                     <label for="policeRecords-worker">Antecedentes policiales</label>
                     <input name="policeRecords-worker" id="policeRecords-worker" class = "file-worker" type="file" required>
-                    <button type="button" class="workerFile-button" onclick = "document.getElementById('policeRecords-worker').click()">Seleccionar archivo</button>
+                    <button type="button" id="policeRecords-workerButton" class="workerFile-button" onclick = "document.getElementById('policeRecords-worker').click()">Seleccionar archivo</button>
                 </div>
 
                 <div class="inputWorker-container">
