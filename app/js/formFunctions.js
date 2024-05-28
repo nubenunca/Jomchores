@@ -242,6 +242,7 @@ export function addWorker(){
         const checkephone = await validateInformation ("phone", phoneWorker, url)
         const checkId= await validateInformation ("id", idWorker, url)
 
+        // If the passwords match and if the email, username, phone, id and password meet the security standards, the worker is added.
         if(checkPassword && checkPasswordSecurity && checkEmail && checkUsername && checkephone && checkId){
             const encryptedPassword = encPass(passwordWorker)
             createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url);
@@ -298,10 +299,11 @@ export function addUser(){
         const checkephoneUser = await validateInformation ("phone", phoneUser, url)
         const checkIdUser = await validateInformation ("id", idUser, url)
 
+        // If the passwords match and if the email, username, phone, id and password meet the security standards, the user is added.
         if(checkPasswordUser && checkPasswordSecurityUser && checkEmailUser && checkUsernameUser && checkephoneUser && checkIdUser){
             const encryptedPasswordUser = encPass(passwordUser)
             createUser (nameUser, lastNameUser, emailUser, usernameUser, encryptedPasswordUser, phoneUser, addressUser, neighborhoodUser, idUser,profilePictureUser, url)
-            // form.reset()
+            form.reset()
             successAlert("El usuario se agrego exitosamente")
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")
