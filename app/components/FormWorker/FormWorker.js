@@ -150,6 +150,7 @@ export const FormWorker = () => {
                     <option value="aseo">Aseo</option>
                     <option value="peluqueria">Peluquería</option>
                     <option value="construccion">Construcción</option>
+                    <option value="electricidad">Electricidad</option>
                 </select>
             </div>
 

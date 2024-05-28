@@ -1,6 +1,7 @@
 //Password encryption library imported
 import CryptoJS from 'crypto-js';
 import { FormWorker } from '../components/FormWorker/FormWorker';
+import { FormUser } from '../components/FormUser/FormUser';
 
 FormWorker();
 
@@ -143,6 +144,53 @@ export async function createWorker (name, lastName, email, username, password, p
     })
 }
 
+async function createUser (name, lastName, email, username, password, phone, address, neighborhood, id,img, url){
+
+    const newUser = {
+        name: name.value,
+        lastName: lastName.value,
+        email: email.value,
+        username: username.value,
+        password: password,
+        phone: phone.value,
+        address: address.value,
+        neighborhood: neighborhood.value,
+        id: id.value,
+        img: img.value
+    } 
+
+
+    await fetch(url,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newUser)
+    })
+}
+
+// Function of success alert
+function successAlert(message){
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: message,
+        showConfirmButton: false,
+        timer: 1500
+      });
+}
+
+// Function of failure alert
+function failure(message){
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: message,
+      });
+}
+
+
+//Function to add the worker
 export function addWorker(){
     const form = document.querySelector(".worker-form");
     const nameWorker = document.querySelector("#name-worker");
@@ -166,7 +214,6 @@ export function addWorker(){
     const idDocumentWorker = document.querySelector("#idDocument-worker")
     const idDocumentWorkerButton = document.querySelector("#idDocument-workerButton")
     const profilePictureWorker = document.querySelector("#profilePicture-worker")
-    const profilePictureWorkerButton = document.querySelector("#profilePicture-workerButton")
     const policeRecordsWorker = document.querySelector("#policeRecords-worker")
     const policeRecordsWorkerButton = document.querySelector("#policeRecords-workerButton")
     const categoryWorker = document.querySelector("#category-worker");
@@ -178,14 +225,13 @@ export function addWorker(){
     selectedFile (certificationWorker, certificationWorkerButton);
     selectedFile (idDocumentWorker, idDocumentWorkerButton);
     selectedFile (policeRecordsWorker, policeRecordsWorkerButton);
-    selectedFile (profilePictureWorker, profilePictureWorkerButton);
 
     validatePasswordsWarning(passwordWorker,verifyPasswordWorker,passwordCoincidence);
     passwordSecurityWarning (passwordWorker, passwordSpan);
     validateInformationWarning ("email", emailWorker, url,emailWorkerSpan, "correo electronico")
-    // validateInformation ("username", usernameWorker, url,usernameWorkerSpan, "nombre de usuario")
-    // validateInformation ("phone", phoneWorker, url,phoneWorkerSpan, "número de celular")
-    // validateInformation ("id", idWorker, url,idWorkerSpan, "El numero de cedula")
+    validateInformationWarning ("username", usernameWorker, url,usernameWorkerSpan, "nombre de usuario")
+    validateInformationWarning ("phone", phoneWorker, url,phoneWorkerSpan, "número de celular")
+    validateInformationWarning ("id", idWorker, url,idWorkerSpan, "número de cedúla")
 
     form.addEventListener("submit", async(event)=>{
         event.preventDefault();
@@ -196,30 +242,71 @@ export function addWorker(){
         const checkephone = await validateInformation ("phone", phoneWorker, url)
         const checkId= await validateInformation ("id", idWorker, url)
 
-        const encryptedPassword = encPass(passwordWorker)
-        createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url)
+        // If the passwords match and if the email, username, phone, id and password meet the security standards, the worker is added.
         if(checkPassword && checkPasswordSecurity && checkEmail && checkUsername && checkephone && checkId){
             const encryptedPassword = encPass(passwordWorker)
             createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url);
             form.reset()
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "El trabajador se agrego exitosamente",
-                showConfirmButton: false,
-                timer: 1500
-              });
+            successAlert("El trabajador se agrego exitosamente")
         }else{
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "No se pudo registrar, revisa nuevamente los datos",
-                footer: '<a href="#">Why do I have this issue?</a>'
-              });
+            failure("No se pudo registrar, revisa nuevamente los datos")
         }
-        
-
     })
+}
+
+
+FormUser()
+//Function to add the worker
+export function addUser(){
+    const form = document.querySelector(".user-form");
+    const nameUser = document.querySelector("#name-user");
+    const lastNameUser = document.querySelector("#lastName-user");
+    const emailUser = document.querySelector("#email-user");
+    const emailUserSpan = document.querySelector(".email-securityUser");
+    const usernameUser = document.querySelector("#userName-user");
+    const usernameUserSpan = document.querySelector(".username-securityUser")
+    const passwordUser = document.querySelector("#password-user");
+    const passwordSpanUser = document.querySelector(".password-securityUser")
+    const verifyPasswordUser = document.querySelector("#verifyPassword-user");
+    const passwordCoincidenceUser = document.querySelector(".password-coincidenceUser")
+    const phoneUser = document.querySelector("#phone-user");
+    const phoneUserSpan = document.querySelector(".phone-securityUser")
+    const addressUser = document.querySelector("#address-user");
+    const neighborhoodUser = document.querySelector("#neighborhood-user");
+    const idUser = document.querySelector("#id-user");
+    const idUserSpan = document.querySelector(".id-securityUser")
+    const idDocumentUser = document.querySelector("#idDocument-user")
+    const idDocumentUserButton = document.querySelector("#idDocument-userButton")
+    const profilePictureUser = document.querySelector("#profilePicture-user")
+
+    const url = "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/users"
     
-    
+    selectedFile (idDocumentUser, idDocumentUserButton);
+
+    validatePasswordsWarning(passwordUser,verifyPasswordUser,passwordCoincidenceUser);
+    passwordSecurityWarning (passwordUser, passwordSpanUser);
+    validateInformationWarning ("email", emailUser, url,emailUserSpan, "correo electronico")
+    validateInformationWarning ("username", usernameUser, url,usernameUserSpan, "nombre de usuario")
+    validateInformationWarning ("phone", phoneUser, url,phoneUserSpan, "número de celular")
+    validateInformationWarning ("id", idUser, url,idUserSpan, "número de cedúla")
+
+    form.addEventListener("submit", async(event)=>{
+        event.preventDefault();
+        const checkPasswordUser = validatePasswords (passwordUser,verifyPasswordUser);
+        const checkPasswordSecurityUser = passwordSecurity (passwordUser);
+        const checkEmailUser = await validateInformation ("email", emailUser, url)
+        const checkUsernameUser = await validateInformation ("username", usernameUser, url)
+        const checkephoneUser = await validateInformation ("phone", phoneUser, url)
+        const checkIdUser = await validateInformation ("id", idUser, url)
+
+        // If the passwords match and if the email, username, phone, id and password meet the security standards, the user is added.
+        if(checkPasswordUser && checkPasswordSecurityUser && checkEmailUser && checkUsernameUser && checkephoneUser && checkIdUser){
+            const encryptedPasswordUser = encPass(passwordUser)
+            createUser (nameUser, lastNameUser, emailUser, usernameUser, encryptedPasswordUser, phoneUser, addressUser, neighborhoodUser, idUser,profilePictureUser, url)
+            form.reset()
+            successAlert("El usuario se agrego exitosamente")
+        }else{
+            failure("No se pudo registrar, revisa nuevamente los datos")
+        }
+    })
 }

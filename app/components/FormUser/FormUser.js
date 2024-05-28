@@ -28,11 +28,13 @@ export const FormUser = () => {
                 <div class="inputUser-container">
                     <label for="email-user">Correo electrónico</label>
                     <input name="email-user" id="email-user" type="email" class = "input-user" placeholder = "rafael@jomchores.com" required>
+                    <span class="email-securityUser"></span>
                 </div>
 
                 <div class="inputUser-container">
                     <label for="userName-user">Nombre de usuario</label>
                     <input name="userName-user" id="userName-user" type="text" class = "input-user" placeholder = "rafagonza" required>
+                    <span class="username-securityUser"></span>
                 </div>
             </div>
 
@@ -40,11 +42,13 @@ export const FormUser = () => {
                 <div class="inputUser-container">
                     <label for="password-user">Contraseña</label>
                     <input name="password-user" id="password-user" type="password" class = "input-user" placeholder = "Contraseña" required>
+                    <span class="password-securityUser"></span>
                 </div>
 
                 <div class="inputUser-container">
                     <label for="verifyPassword-user">Ingrese nuevamente la contraseña</label>
                     <input name="verifyPassword-user" id="verifyPassword-user" type="password" class = "input-user" placeholder = "Contraseña" required>
+                    <span class="password-coincidenceUser"></span>
                 </div>
             </div>
             
@@ -52,6 +56,7 @@ export const FormUser = () => {
                 <div class="inputUser-container">
                     <label for="phone-user">Celular</label>
                     <input name="phone-user" id="phone-user" type="tel" class = "input-user" placeholder = "3202146890" required>
+                    <span class="phone-securityUser"></span>
                 </div>
 
                 <div class="inputUser-container">
@@ -102,6 +107,7 @@ export const FormUser = () => {
                 <div class="inputUser-container">
                     <label for="id-user">Número de cedúla</label>
                     <input name="id-user" id="id-user" type="number" class = "input-user" placeholder = "1234567890 " required>
+                    <span class="id-securityUser"></span>
                 </div>
             </div>
             
@@ -109,7 +115,7 @@ export const FormUser = () => {
                 <div class="inputUser-container">
                     <label for="idDocument-user">Subir cedúla</label>
                     <input name="idDocument-user" id="idDocument-user" class = "file-user" type="file" required>
-                    <button type="button" class="userFile-button" onclick = "document.getElementById('idDocument-user').click()" >Seleccionar archivo</button>
+                    <button type="button" id="idDocument-userButton" class="userFile-button" onclick = "document.getElementById('idDocument-user').click()" >Seleccionar archivo</button>
                 </div>
 
                 <div class="inputUser-container">
