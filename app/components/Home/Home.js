@@ -3,34 +3,44 @@
 import "./Home.scss";
 
 //Se crea el contenedor
-const main = document.createElement('section');
+const main = document.createElement("section");
 
 function createTitle(titleText) {
-    const title = document.createElement('h2');
-    title.classList.add("text-center", "fw-bold", "display-3");
-    title.innerHTML = titleText;
-    return title;
+  const title = document.createElement("h2");
+  title.classList.add("text-center", "fw-bold", "display-3");
+  title.innerHTML = titleText;
+  return title;
 }
 
-main.appendChild(createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
-`));
+main.appendChild(
+  createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
+`)
+);
 
 //This function create the card services
 function createSection() {
-    const section = document.createElement('section');
-    section.classList.add("container-fluid", "row", "justify-content-center", "align-content-center", "gap-2");
-    section.innerHTML = "";
-    return section;
+  const section = document.createElement("section");
+  section.classList.add(
+    "container-fluid",
+    "row",
+    "justify-content-center",
+    "align-content-center",
+    "gap-2"
+  );
+  section.innerHTML = "";
+  return section;
 }
 
 const section = main.appendChild(createSection());
 
 async function createCardService() {
-    const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/services");
-    const data = await response.json();
-    section.innerHTML = "";
-    data.forEach(service => {
-        section.innerHTML += `
+  const response = await fetch(
+    "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/services"
+  );
+  const data = await response.json();
+  section.innerHTML = "";
+  data.forEach((service) => {
+    section.innerHTML += `
         <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded animate__animated animate__backInLeft" style="width: 18rem;">
             <img src="${service.image}" class="card-img-top img-fluid rounded-4 mt-3 "alt="${service.title} image" style="width: 18rem; height: 11rem;">
             <div class="card-body">
@@ -40,23 +50,23 @@ async function createCardService() {
             </div>
         </div>
         `;
-    });
+  });
 }
 
-createCardService()
+createCardService();
 
 //This function create the carousel
 function createSectionTwo() {
-    const sectionTwo = document.createElement('section');
-    sectionTwo.classList.add("container-fluid");
-    sectionTwo.innerHTML = "";
-    return sectionTwo;
+  const sectionTwo = document.createElement("section");
+  sectionTwo.classList.add("container-fluid");
+  sectionTwo.innerHTML = "";
+  return sectionTwo;
 }
 
 const sectionTwo = main.appendChild(createSectionTwo());
 
 function createCarousel() {
-    sectionTwo.innerHTML = `
+  sectionTwo.innerHTML = `
         <div data-aos="fade-up-right" data-aos-once="false" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
             <div class="carousel-inner" style="height:450px;">
             <div class="carousel-item active" data-bs-interval="10000">
@@ -90,26 +100,34 @@ function createCarousel() {
         `;
 }
 
-createCarousel()
+createCarousel();
 
 //This function create the comments card
 
 function createSectionThree() {
-    const sectionThree = document.createElement('section');
-    sectionThree.classList.add("container-fluid", "mt-3", "d-flex", "flex-wrap", "justify-content-center", "align-content-center", "gap-2");
-    sectionThree.innerHTML = "";
-    return sectionThree;
+  const sectionThree = document.createElement("section");
+  sectionThree.classList.add(
+    "container-fluid",
+    "mt-3",
+    "d-flex",
+    "flex-wrap",
+    "justify-content-center",
+    "align-content-center",
+    "gap-2"
+  );
+  sectionThree.innerHTML = "";
+  return sectionThree;
 }
 
 main.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
 const sectionThree = main.appendChild(createSectionThree());
 
 async function createComments() {
-    const response = await fetch("http://localhost:3000/comments");
-    const data = await response.json();
-    sectionThree.innerHTML = "";
-    data.forEach(comment => {
-        sectionThree.innerHTML += `
+  const response = await fetch("http://localhost:3000/comments");
+  const data = await response.json();
+  sectionThree.innerHTML = "";
+  data.forEach((comment) => {
+    sectionThree.innerHTML += `
         <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 p-2">
@@ -124,24 +142,24 @@ async function createComments() {
             </div>
         </div>
         `;
-    });
+  });
 }
 
 createComments();
 
 //This function create the most demanded services
 function createSectionFour() {
-    const sectionFour = document.createElement('section');
-    sectionFour.classList.add("container-fluid");
-    sectionFour.setAttribute("data-aos", "flip-left", "data-aos-once", "false");
-    sectionFour.innerHTML = "";
-    return sectionFour;
+  const sectionFour = document.createElement("section");
+  sectionFour.classList.add("container-fluid");
+  sectionFour.setAttribute("data-aos", "flip-left", "data-aos-once", "false");
+  sectionFour.innerHTML = "";
+  return sectionFour;
 }
 
 const sectionFour = main.appendChild(createSectionFour());
 
 function createGraphic() {
-    sectionFour.innerHTML = `
+  sectionFour.innerHTML = `
         <h2 class="text-center fw-bold display-3 mb-3">Servicios más demandados</h2>
         <h5 class="text-start fw-bold">Electricistas</h5>
         <div class="progress mb-2" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -162,11 +180,11 @@ function createGraphic() {
         `;
 }
 
-createGraphic()
+createGraphic();
 
-export function globalMain(){
-    const mainHtml = main;
-    return mainHtml;
+export function globalMain() {
+  const mainHtml = main;
+  return mainHtml;
 }
 
 globalMain();
