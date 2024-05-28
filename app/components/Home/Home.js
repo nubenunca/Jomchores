@@ -57,8 +57,8 @@ const sectionTwo = main.appendChild(createSectionTwo());
 
 function createCarousel() {
     sectionTwo.innerHTML = `
-        <div data-aos="fade-up-right" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
-            <div class="carousel-inner";>
+        <div data-aos="fade-up-right" data-aos-once="false" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner" style="height:450px;">
             <div class="carousel-item active" data-bs-interval="10000">
                 <img src="./public/img/img1.webp" class="d-block w-100" alt="image carousel">
             </div>
@@ -110,7 +110,7 @@ async function createComments() {
     sectionThree.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
     data.forEach(comment => {
         sectionThree.innerHTML += `
-        <div class="card mb-3 mt-4" style="max-width: 540px;">
+        <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 p-2">
                     <img src="${comment.image}" class="img-fluid rounded-start img-fluid h-100" alt="comment profile picture">
