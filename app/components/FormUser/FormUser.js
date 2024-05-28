@@ -11,7 +11,7 @@ export const FormUser = () => {
         <h1>Registrarse</h1>
         <h4 class = "user-subtitle">Usuario</h4>
 
-        <form action="" class = "user-form">
+        <form class = "user-form">
             <div class = "pcView-container">
                 <div class="inputUser-container">
                     <label for="name-user">Nombre</label>

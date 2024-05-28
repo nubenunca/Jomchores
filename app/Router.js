@@ -3,6 +3,8 @@ import { serviceCards } from "./components/Card/Card";
 import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
 import { globalMain } from "./components/Home/Home";
+import { LogIn, LogInValidation } from "./components/LogIn/LogIn";
+import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 import { addUser, addWorker } from "./js/formFunctions";
 
 // Path file, according to the path each component is rendered.
@@ -21,12 +23,21 @@ export const Router = () => {
     main.append(serviceCards());
   } else if (hash == "#/registro") {
     main.append(FormUser());
-    addUser();
-
+    addUser()
   } else if (hash == "#/trabajo-con-nosotros") {
     main.append(FormWorker());
     addWorker();
   } else if(hash == "#/trabajo") {
-    main.append(workDetailView());
+    main.append(WorkerDetailView());
+  }else if(hash == "#/log-in") {
+    main.append(LogIn());
+    LogInValidation()
+  } else if(hash == "#/gestionar-trabajadores") {
+    const user = localStorage.getItem("profile");
+    if(user == null){
+      window.location.hash = ""
+    }else{
+      main.append(WorkerDetailView())
+    }
   }
 };
