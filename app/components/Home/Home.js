@@ -36,7 +36,7 @@ async function createCardService() {
             <div class="card-body">
                 <h5 class="card-title text-center" style="height:48px;">${service.title}</h5>
                 <p class="card-text text-center" style="height:96px;">${service.description}</p>
-                <a href="#" class="btn btn-red text-white fw-medium d-flex align-content-center justify-content-center">${service.callToAction}</a>
+                <a href="#" class="btn btn-red text-white fw-medium d-flex align-content-center justify-content-center animate__animated animate__pulse animate__slower animate__infinite">${service.callToAction}</a>
             </div>
         </div>
         `;
