@@ -120,7 +120,7 @@ export const FormUser = () => {
 
             <div class="inputUser-container">
                 <div class="workerConditions-container">
-                    <label for="conditions-worker">Acepto los terminos y condiciones</label>
+                    <label for="conditions-worker">Acepto los <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> terminos y condiciones </a> </label>
                     <input type="checkbox" name="conditions-worker" id="conditions-worker" required>
                 </div>
             </div>
@@ -129,6 +129,21 @@ export const FormUser = () => {
                 <button type="submit" class = "sendUser-button"> Enviar </button>
             </div>
 
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Terminos y condiciones</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>Jomchores</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
             
         </form>
     `
