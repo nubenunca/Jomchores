@@ -31,12 +31,12 @@ async function createCardService() {
     section.innerHTML = "";
     data.forEach(service => {
         section.innerHTML += `
-        <div class="card col-sm-12 col-md-12 mt-3" style="width: 18rem;">
+        <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded animate__animated animate__backInLeft" style="width: 18rem;">
             <img src="${service.image}" class="card-img-top img-fluid rounded-4 mt-3 "alt="${service.title} image" style="width: 18rem; height: 11rem;">
             <div class="card-body">
                 <h5 class="card-title text-center" style="height:48px;">${service.title}</h5>
                 <p class="card-text text-center" style="height:96px;">${service.description}</p>
-                <a href="#" class="btn btn-red text-white fw-medium d-flex align-content-center justify-content-center">${service.callToAction}</a>
+                <a href="#" class="btn btn-red text-white fw-medium d-flex align-content-center justify-content-center animate__animated animate__pulse animate__slower animate__infinite">${service.callToAction}</a>
             </div>
         </div>
         `;
@@ -57,8 +57,8 @@ const sectionTwo = main.appendChild(createSectionTwo());
 
 function createCarousel() {
     sectionTwo.innerHTML = `
-        <div id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
-            <div class="carousel-inner";>
+        <div data-aos="fade-up-right" data-aos-once="false" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner" style="height:450px;">
             <div class="carousel-item active" data-bs-interval="10000">
                 <img src="./public/img/img1.webp" class="d-block w-100" alt="image carousel">
             </div>
@@ -110,7 +110,7 @@ async function createComments() {
     sectionThree.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
     data.forEach(comment => {
         sectionThree.innerHTML += `
-        <div class="card mb-3 mt-4" style="max-width: 540px;">
+        <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 p-2">
                     <img src="${comment.image}" class="img-fluid rounded-start img-fluid h-100" alt="comment profile picture">
@@ -133,6 +133,7 @@ createComments();
 function createSectionFour() {
     const sectionFour = document.createElement('section');
     sectionFour.classList.add("container-fluid");
+    sectionFour.setAttribute("data-aos", "flip-left", "data-aos-once", "false");
     sectionFour.innerHTML = "";
     return sectionFour;
 }
