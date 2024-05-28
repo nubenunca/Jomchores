@@ -14,7 +14,7 @@ export function Footer() {
 </div>
 <div class="copy-right">
   <img
-    class="logo-footer"
+    class="logo-footer animate__animated animate__headShake animate__delay-5s animate__infinite animate__slower"
     src="./public/img/logo transparente blanco+.png"
     alt="logo-img"
   />
