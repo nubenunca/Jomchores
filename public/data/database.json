@@ -141,6 +141,18 @@
       "address": "cradf",
       "neighborhood": "Robledo",
       "img": "https://www.misionservir.com/wp-content/uploads/2023/06/buena-presentacion-personal-servicio-de-aseo-oficinas.jpg"
+    },
+    {
+      "id": "7654367",
+      "name": "juan",
+      "lastName": "ramirez",
+      "email": "juanr@gmail.com",
+      "username": "juanferw",
+      "password": "U2FsdGVkX1+5C3ga5tU8w7UFIgpDYMPo3teQApavy6I=",
+      "phone": "54346",
+      "address": "cradf",
+      "neighborhood": "Villa Hermosa",
+      "img": "https://www.misionservir.com/wp-content/uploads/2023/06/buena-presentacion-personal-servicio-de-aseo-oficinas.jpg"
     }
   ]
 }
