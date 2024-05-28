@@ -1,6 +1,4 @@
-// const urlGeneral = "http://localhost:3000/services";
-
-let id;
+import { alertSmallSuccess } from "./Alerts";
 
 const CrudDeleteSection = document.createElement('section');
 
@@ -54,11 +52,21 @@ async function index() {
 
 index()
 
+CrudDeleteSection.addEventListener('click', async function (event) {
+    // ACA DEBEMOS LOCALIZAR A LOS ESCUCHADORES DE EVENTOS
+    if (event.target.classList.contains("btn-danger")) { //nos aseguramos que estamos presionando el botón rojo 
+        const id = event.target.getAttribute('data-id');//le sacamos el ID al botón rojo
+        await deleteItem(id)//enviamos el id a la función que se encarga de eliminar
+        await index()//Volvemos a recargar la lista
+    }
+})
+
 async function deleteItem(id) {
     //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UNA CATEGORIA
-    await fetch(`"http://localhost:3000/services"/${id}`, {
+    await fetch(`http://localhost:3000/workers/${id}`, {
         method: 'DELETE'
     })
+    alertSmallSuccess("Aliado eliminado exitosamente")
 }
 
 export function globalDelete(){
