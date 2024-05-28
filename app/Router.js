@@ -1,4 +1,5 @@
 import { AboutUs } from "./components/AboutUs/AboutUs";
+import { globalDelete } from "./components/CRUD-Delete/Delete";
 import { serviceCards } from "./components/Card/Card";
 import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
@@ -28,5 +29,7 @@ export const Router = () => {
     addWorker();
   } else if(hash == "#/trabajo") {
     main.append(workDetailView());
+  }else if (hash == "#/crudDelete"){
+    main.append(globalDelete());
   }
 };
