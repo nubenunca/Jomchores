@@ -31,7 +31,7 @@ async function createCardService() {
     section.innerHTML = "";
     data.forEach(service => {
         section.innerHTML += `
-        <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+        <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded animate__animated animate__backInLeft" style="width: 18rem;">
             <img src="${service.image}" class="card-img-top img-fluid rounded-4 mt-3 "alt="${service.title} image" style="width: 18rem; height: 11rem;">
             <div class="card-body">
                 <h5 class="card-title text-center" style="height:48px;">${service.title}</h5>
