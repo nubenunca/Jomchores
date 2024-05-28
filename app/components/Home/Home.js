@@ -101,13 +101,13 @@ function createSectionThree() {
     return sectionThree;
 }
 
+main.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
 const sectionThree = main.appendChild(createSectionThree());
 
 async function createComments() {
     const response = await fetch("http://localhost:3000/comments");
     const data = await response.json();
     sectionThree.innerHTML = "";
-    sectionThree.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
     data.forEach(comment => {
         sectionThree.innerHTML += `
         <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
