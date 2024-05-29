@@ -15,7 +15,7 @@ export function Footer() {
 <div class="copy-right">
   <img
     class="logo-footer animate__animated animate__headShake animate__delay-5s animate__infinite animate__slower"
-    src="./public/img/logo transparente blanco+.png"
+    src="./public/img/logo_blanco.ico"
     alt="logo-img"
   />
   <p class="copy-footer"> &copy; 2024 Jomchores, todos los derechos reservados</p>
