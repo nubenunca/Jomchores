@@ -159,7 +159,7 @@ async function createComments() {
     sectionThree.innerHTML = "";
     data.forEach((comment) => {
         sectionThree.innerHTML += `
-        <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
+        <div data-aos="zoom-in" data-aos-once="false" class="card mb-2 mt-4 shadow-sm p-3 bg-body-tertiary rounded" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 p-2">
                     <img src="${comment.image}" class="img-fluid rounded-start img-fluid h-100" alt="comment profile picture">
