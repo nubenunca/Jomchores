@@ -16,7 +16,7 @@ export const WorkerDetailView = (props) => {
   />
 </figure>
 <h2 class="service-worker text-capitalize">${category}</h2>
-<p class="work-experience text-capitalize">
+<p class="work-experience lh-bas">
   ${workDescription}
 </p>
 </div>

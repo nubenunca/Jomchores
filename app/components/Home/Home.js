@@ -1,25 +1,25 @@
 // Styles
 
-import "./Home.scss";
+import "./Home.scss"
 
 //Se crea el contenedor
-const main = document.createElement("section");
+const main = document.createElement("section")
 
 function createTitle(titleText) {
-  const title = document.createElement("h2");
-  title.classList.add("text-center", "fw-bold", "display-3");
-  title.innerHTML = titleText;
-  return title;
+  const title = document.createElement("h2")
+  title.classList.add("text-center", "fw-bold", "display-3")
+  title.innerHTML = titleText
+  return title
 }
 
 main.appendChild(
   createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
 `)
-);
+)
 
 //This function create the card services
 function createSection() {
-  const section = document.createElement("section");
+  const section = document.createElement("section")
   section.classList.add(
     "container-fluid",
     "row",
@@ -27,17 +27,17 @@ function createSection() {
     "align-content-center",
     "gap-2"
   );
-  section.innerHTML = "";
-  return section;
+  section.innerHTML = ""
+  return section
 }
 
-const section = main.appendChild(createSection());
+const section = main.appendChild(createSection())
 
 async function createCardService() {
   const response = await fetch(
     "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/services"
   );
-  const data = await response.json();
+  const data = await response.json()
   section.innerHTML = "";
   data.forEach((service) => {
     section.innerHTML += `
@@ -57,13 +57,13 @@ createCardService();
 
 //This function create the carousel
 function createSectionTwo() {
-  const sectionTwo = document.createElement("section");
-  sectionTwo.classList.add("container-fluid");
-  sectionTwo.innerHTML = "";
+  const sectionTwo = document.createElement("section")
+  sectionTwo.classList.add("container-fluid")
+  sectionTwo.innerHTML = ""
   return sectionTwo;
 }
 
-const sectionTwo = main.appendChild(createSectionTwo());
+const sectionTwo = main.appendChild(createSectionTwo())
 
 function createCarousel() {
   sectionTwo.innerHTML = `
@@ -97,15 +97,15 @@ function createCarousel() {
             <span class="visually-hidden">Next</span>
             </button>
         </div>
-        `;
+        `
 }
 
-createCarousel();
+createCarousel()
 
 //This function create the comments card
 
 function createSectionThree() {
-  const sectionThree = document.createElement("section");
+  const sectionThree = document.createElement("section")
   sectionThree.classList.add(
     "container-fluid",
     "mt-3",
@@ -115,19 +115,19 @@ function createSectionThree() {
     "align-content-center",
     "gap-2"
   );
-  sectionThree.innerHTML = "";
+  sectionThree.innerHTML = ""
   return sectionThree;
 }
 
-main.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
-const sectionThree = main.appendChild(createSectionThree());
+main.appendChild(createTitle(`Lo que piensan nuestros usuarios`))
+const sectionThree = main.appendChild(createSectionThree())
 
 async function createComments() {
   const response = await fetch(
     "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
   );
-  const data = await response.json();
-  sectionThree.innerHTML = "";
+  const data = await response.json()
+  sectionThree.innerHTML = ""
   data.forEach((comment) => {
     sectionThree.innerHTML += `
         <div data-aos="zoom-in" data-aos-once="false" class="card mb-3 mt-4" style="max-width: 540px;">
@@ -151,14 +151,14 @@ createComments();
 
 //This function create the most demanded services
 function createSectionFour() {
-  const sectionFour = document.createElement("section");
-  sectionFour.classList.add("container-fluid");
-  sectionFour.setAttribute("data-aos", "fade-up", "data-aos-once", "false");
-  sectionFour.innerHTML = "";
+  const sectionFour = document.createElement("section")
+  sectionFour.classList.add("container-fluid")
+  sectionFour.setAttribute("data-aos", "fade-up", "data-aos-once", "false")
+  sectionFour.innerHTML = ""
   return sectionFour;
 }
 
-const sectionFour = main.appendChild(createSectionFour());
+const sectionFour = main.appendChild(createSectionFour())
 
 function createGraphic() {
   sectionFour.innerHTML = `
@@ -182,11 +182,11 @@ function createGraphic() {
         `;
 }
 
-createGraphic();
+createGraphic()
 
 export function globalMain() {
-  const mainHtml = main;
-  return mainHtml;
+  const mainHtml = main
+  return mainHtml
 }
 
-globalMain();
+globalMain()
