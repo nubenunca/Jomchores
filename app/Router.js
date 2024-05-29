@@ -1,5 +1,5 @@
 import { AboutUs } from "./components/AboutUs/AboutUs";
-import { globalDelete } from "./components/CRUD-Delete/Delete";
+import { globalDelete } from "./components/WorkerDelete/Delete";
 import { serviceCards } from "./components/Card/Card";
 import { FormUser } from "./components/FormUser/FormUser";
 import { FormWorker } from "./components/FormWorker/FormWorker";
