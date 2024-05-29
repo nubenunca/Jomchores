@@ -72,3 +72,17 @@
     width: 25% !important;
    
 }
+
+@media (max-width: 740px){
+    #content-button-service{
+       display: flex ;
+       flex-direction: column;
+       align-content: center;
+   }
+   .btn-service{
+    width: 100% !important;
+   
+   }
+
+    
+}

@@ -31,7 +31,7 @@ export function Header() {
               <a class="nav-link items" href="#/quienes-somos">¿Quiénes somos?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link items" href="#/servicios">Servicios</a>
+              <a class="nav-link items" id="services-reload" href="#/servicios">Servicios</a>
             </li>
             <li class="nav-item">
             <a class="nav-link items" href="#/registro">Registro</a>
