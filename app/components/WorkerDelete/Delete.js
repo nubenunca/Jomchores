@@ -36,7 +36,7 @@ table()
 
 async function index() {
     const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")//Llamamos a los datos
-    const data = await response.json() //convertimos los datos de JSON a Javascript
+    const data = await response.json() //convert JSON to Javascript
     tbody.innerHTML = ""
     data.forEach(element => {
         tbody.innerHTML += `
@@ -63,7 +63,7 @@ CrudDeleteSection.addEventListener('click', async function (event) {
 })
 
 async function deleteItem(id) {
-    //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UN TRABAJADOR
+    //program the function to delete the worker
     const workerToDelete = {
         id
     } 
@@ -82,7 +82,7 @@ export function globalDelete(){
     return deleteHtml;
 }
 
-// ADD EVENT LISTENER PARA CERRAR SESION
+// ADD EVENT LISTENER to sing out
 CrudDeleteSection.addEventListener("click", (event)=>{
     if(event.target.classList.contains("log-out")){
         localStorage.removeItem('profile');
