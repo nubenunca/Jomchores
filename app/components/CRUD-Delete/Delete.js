@@ -65,9 +65,16 @@ CrudDeleteSection.addEventListener('click', async function (event) {
 })
 
 async function deleteItem(id) {
-    //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UNA CATEGORIA
-    await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers/${id}`, {
-        method: 'DELETE'
+    //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UN TRABAJADOR
+    const workerToDelete = {
+        id
+    } 
+    await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(workerToDelete)
     })
     alertSmallSuccess("Aliado eliminado exitosamente")
 }
