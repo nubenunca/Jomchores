@@ -1,4 +1,5 @@
 import "./Header.scss";
+import "../Card/Card.js"
 
 export function Header() {
   const header = document.createElement("header");
