@@ -8,7 +8,7 @@
       "callToAction": "Necesito un electricista"
     },
     {
-      "id": "1",
+      "id": "2",
       "image": "../public/img/plumber.webp",
       "title": "Plomeros",
       "description": "Soluciones de plomería garantizadas con respuesta inmediata. ¡Agenda tu servicio ahora!",
@@ -57,21 +57,6 @@
   ],
   "workers": [
     {
-      "name": "Rafael",
-      "lastName": "Gonzalez",
-      "email": "rafael@jomchores.com",
-      "username": "rafagonza",
-      "password": "123",
-      "phone": "3202146890",
-      "address": "cra 22 #33-120",
-      "neighborhood": "Buenos Aires",
-      "id": "123456789",
-      "category": "plomeria",
-      "workDescription": "Especialista en tuberias",
-      "cost": "50000",
-      "img": "https://www.plomerosautorizados.com/wp-content/uploads/2022/11/Plomero-PR.png"
-    },
-    {
       "id": "42332",
       "name": "pablo",
       "lastName": "ruiz",
@@ -87,34 +72,19 @@
       "img": "https://www.misionservir.com/wp-content/uploads/2023/06/buena-presentacion-personal-servicio-de-aseo-oficinas.jpg"
     },
     {
-      "id": "09776432",
-      "name": "santiago",
-      "lastName": "suarez",
-      "email": "santiagosuarez@hotmail.com",
-      "username": "santi",
-      "password": "U2FsdGVkX1/Ii5FwoBA4GTbw3mUScaCHQioxaLJ3Uds=",
-      "phone": "987543",
+      "id": "42332",
+      "name": "pablo",
+      "lastName": "ruiz",
+      "email": "pablo@gmail.com",
+      "username": "pablo",
+      "password": "123",
+      "phone": "123456",
       "address": "cra",
-      "neighborhood": "La América",
+      "neighborhood": "Robledo",
       "category": "aseo",
-      "workDescription": "Aseo a casas y negocios ",
-      "cost": "40000",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMZuGJYw4B7fK9q-C409ap0L5eOTKGy_KFJthn6rcfw&s"
-    },
-    {
-      "id": "2347689",
-      "name": "Lucho ",
-      "lastName": "Rubio",
-      "email": "luisrubio@gmail.com",
-      "username": "luis",
-      "password": "U2FsdGVkX1+OXMQdp1lWXlqQD+CdFL4bmMgohU6tjzQ=",
-      "phone": "08765432",
-      "address": "cra",
-      "neighborhood": "Laureles Estadio",
-      "category": "peluqueria",
-      "workDescription": "sfdsgregtre",
-      "cost": "40000",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMZuGJYw4B7fK9q-C409ap0L5eOTKGy_KFJthn6rcfw&s"
+      "workDescription": "Aseo a casas",
+      "cost": "20000",
+      "img": "https://www.misionservir.com/wp-content/uploads/2023/06/buena-presentacion-personal-servicio-de-aseo-oficinas.jpg"
     }
   ],
   "users": [
