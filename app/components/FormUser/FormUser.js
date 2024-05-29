@@ -1,10 +1,11 @@
+//Necessary import the styles of module
 import "./FormUser.scss"
 
 //User registration form
 export const FormUser = () => {
 
-    let section = document.createElement("section");
-    section.className = "form-section";
+    let section = document.createElement("section")
+    section.className = "form-section"
 
     section.innerHTML = 
     `

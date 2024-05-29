@@ -1,7 +1,7 @@
-
+// This variable will create the section "¿Quienes somos?"
 export const AboutUs = () => {
-  let section = document.createElement("section");
-  section.className = "about-us";
+  let section = document.createElement("section")
+  section.className = "about-us"
   section.innerHTML = `
       <div class="abaut-us-container">
         <h1>¿Quiénes somos?</h1>
@@ -19,7 +19,7 @@ export const AboutUs = () => {
 
         </div>
         <button class="register-button animate__animated animate__pulse animate__slower animate__infinite"><a href="#/trabajo-con-nosotros">Registrarme </a></button>
-      </div>`;
+      </div>`
 
-  return section;
-};
+  return section
+}

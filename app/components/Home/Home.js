@@ -1,12 +1,14 @@
-// Styles
+// Styles of the module
+import "./Home.scss"
 
-import "./Home.scss";
+//Import the function
 
-//Se crea el contenedor
-const main = document.createElement("section");
+//Create the container
+const main = document.createElement("section")
 
+//Create the WhatsApp's button
 function createWhatsappButtonSection() {
-    const wpSection = document.createElement("section");
+    const wpSection = document.createElement("section")
     wpSection.classList.add(
         "border", 
         "border-success", 
@@ -20,54 +22,56 @@ function createWhatsappButtonSection() {
         "animate__pulse", 
         "animate__slow", 
         "animate__infinite"
-    );
-    wpSection.innerHTML = "";
-    return wpSection;
+    )
+    wpSection.innerHTML = ""
+    return wpSection
 }
 
-const WhatsappButtonsection = main.appendChild(createWhatsappButtonSection());
+const WhatsappButtonsection = main.appendChild(createWhatsappButtonSection())
 function createWhatsappButton() {
     WhatsappButtonsection.innerHTML = `
     <a href="https://wa.me/17865432489" target="_blank"><i class="bi bi-whatsapp text-white icono-whatsapp fs-2"></i></a>
-        `;
+        `
 }
 
-createWhatsappButton();
+createWhatsappButton()
+
+//Create the titles of homepage
 
 function createTitle(titleText) {
-    const title = document.createElement("h2");
-    title.classList.add("text-center", "fw-bold", "display-4");
-    title.innerHTML = titleText;
-    return title;
+    const title = document.createElement("h2")
+    title.classList.add("text-center", "fw-bold", "display-4")
+    title.innerHTML = titleText
+    return title
 }
 
 main.appendChild(
     createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
 `)
-);
+)
 
 //This function create the card services
 function createSection() {
-    const section = document.createElement("section");
+    const section = document.createElement("section")
     section.classList.add(
         "container-fluid",
         "row",
         "justify-content-center",
         "align-content-center",
         "gap-2"
-    );
-    section.innerHTML = "";
-    return section;
+    )
+    section.innerHTML = ""
+    return section
 }
 
-const section = main.appendChild(createSection());
+const section = main.appendChild(createSection())
 
 async function createCardService() {
     const response = await fetch(
         "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/services"
-    );
-    const data = await response.json();
-    section.innerHTML = "";
+    )
+    const data = await response.json()
+    section.innerHTML = ""
     data.forEach((service) => {
         section.innerHTML += `
         <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded animate__animated animate__backInLeft" style="width: 18rem;">
@@ -78,21 +82,21 @@ async function createCardService() {
                 <a href="#/servicios" class="btn btn-red bg-red text-white fw-medium d-flex align-content-center justify-content-center animate__animated animate__pulse animate__slower animate__infinite">${service.callToAction}</a>
             </div>
         </div>
-        `;
-    });
+        `
+    })
 }
 
-createCardService();
+createCardService()
 
 //This function create the carousel
 function createSectionTwo() {
-    const sectionTwo = document.createElement("section");
-    sectionTwo.classList.add("container-fluid");
-    sectionTwo.innerHTML = "";
-    return sectionTwo;
+    const sectionTwo = document.createElement("section")
+    sectionTwo.classList.add("container-fluid")
+    sectionTwo.innerHTML = ""
+    return sectionTwo
 }
 
-const sectionTwo = main.appendChild(createSectionTwo());
+const sectionTwo = main.appendChild(createSectionTwo())
 
 function createCarousel() {
     sectionTwo.innerHTML = `
@@ -126,15 +130,15 @@ function createCarousel() {
             <span class="visually-hidden">Next</span>
             </button>
         </div>
-        `;
+        `
 }
 
-createCarousel();
+createCarousel()
 
 //This function create the comments card
 
 function createSectionThree() {
-    const sectionThree = document.createElement("section");
+    const sectionThree = document.createElement("section")
     sectionThree.classList.add(
         "container-fluid",
         "mt-3",
@@ -143,21 +147,21 @@ function createSectionThree() {
         "justify-content-center",
         "align-content-center",
         "gap-2"
-    );
-    sectionThree.innerHTML = "";
-    return sectionThree;
+    )
+    sectionThree.innerHTML = ""
+    return sectionThree
 }
 
-main.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
-const sectionThree = main.appendChild(createSectionThree());
+main.appendChild(createTitle(`Lo que piensan nuestros usuarios`))
+const sectionThree = main.appendChild(createSectionThree())
 
 //This function create the commentss
 async function createComments() {
     const response = await fetch(
         "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
-    );
-    const data = await response.json();
-    sectionThree.innerHTML = "";
+    )
+    const data = await response.json()
+    sectionThree.innerHTML = ""
     data.forEach((comment) => {
         sectionThree.innerHTML += `
         <div data-aos="zoom-in" data-aos-once="false" class="card mb-2 mt-4 shadow-sm p-3 bg-body-tertiary rounded" style="max-width: 540px;">
@@ -173,22 +177,22 @@ async function createComments() {
                 </div>
             </div>
         </div>
-        `;
-    });
+        `
+    })
 }
 
-createComments();
+createComments()
 
 //This function create the most demanded services
 function createSectionFour() {
-    const sectionFour = document.createElement("section");
-    sectionFour.classList.add("container-fluid");
-    sectionFour.setAttribute("data-aos", "fade-up", "data-aos-once", "false");
-    sectionFour.innerHTML = "";
-    return sectionFour;
+    const sectionFour = document.createElement("section")
+    sectionFour.classList.add("container-fluid")
+    sectionFour.setAttribute("data-aos", "fade-up", "data-aos-once", "false")
+    sectionFour.innerHTML = ""
+    return sectionFour
 }
 
-const sectionFour = main.appendChild(createSectionFour());
+const sectionFour = main.appendChild(createSectionFour())
 
 function createGraphic() {
     sectionFour.innerHTML = `
@@ -209,14 +213,18 @@ function createGraphic() {
         <div class="progress mb-2" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger fw-medium" style="width: 10%">10%</div>
         </div>
-        `;
+        `
 }
 
-createGraphic();
+createGraphic()
 
+// This function will export the content created
 export function globalMain() {
-    const mainHtml = main;
-    return mainHtml;
+    const mainHtml = main
+    return mainHtml
 }
 
-globalMain();
+globalMain()
+
+
+//This function will filter the content

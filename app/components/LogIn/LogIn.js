@@ -1,9 +1,10 @@
-import "./LogIn.scss";
+//Necessary import the styles of module
+import "./LogIn.scss"
 
 // Log in form
 export const LogIn = () => {
-    const section = document.createElement("section");
-    section.className = "login-section";
+    const section = document.createElement("section")
+    section.className = "login-section"
 
     section.innerHTML = 
     `
@@ -18,15 +19,15 @@ export const LogIn = () => {
             </div>
         </form>
     `
-    return section;
+    return section
 }
 
 // Fuction to log in as an administrator
 export const LogInValidation = () => {
-    const emailAdmin = "admin@jomchores.com";
-    const passwordAdmin = "jomchores123";
+    const emailAdmin = "admin@jomchores.com"
+    const passwordAdmin = "jomchores123"
 
-    const form = document.getElementById("login-form");
+    const form = document.getElementById("login-form")
     const email = document.querySelector("#email-admin")
     const password = document.querySelector("#password-admin")
 
@@ -45,7 +46,7 @@ export const LogInValidation = () => {
                 icon: "error",
                 title: "Oops...",
                 text: "Datos incorrectos",
-              });
+              })
         }
     })
 }

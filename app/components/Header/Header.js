@@ -1,10 +1,11 @@
+//Necessary import the styles of module
 
-
-import "./Header.scss";
+import "./Header.scss"
 import "../Card/Card.js"
 
+// Create the header element
 export function Header() {
-  const header = document.createElement("header");
+  const header = document.createElement("header")
 
   header.innerHTML = `
 
@@ -45,6 +46,6 @@ export function Header() {
     </nav>      
     </section>
 
-`;
-  return header;
+`
+  return header
 }
