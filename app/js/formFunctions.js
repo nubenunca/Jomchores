@@ -247,6 +247,11 @@ export function addWorker(){
             const encryptedPassword = encPass(passwordWorker)
             createWorker (nameWorker, lastNameWorker, emailWorker, usernameWorker, encryptedPassword, phoneWorker, addressWorker, neighborhoodWorker, idWorker, categoryWorker, descriptionWorker, priceWorker,profilePictureWorker, url);
             form.reset()
+
+            certificationWorkerButton.className = "workerFile-button";
+            idDocumentWorkerButton.className = "workerFile-button"
+            policeRecordsWorkerButton.className = "workerFile-button"
+
             successAlert("El trabajador se agrego exitosamente")
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")
@@ -304,6 +309,9 @@ export function addUser(){
             const encryptedPasswordUser = encPass(passwordUser)
             createUser (nameUser, lastNameUser, emailUser, usernameUser, encryptedPasswordUser, phoneUser, addressUser, neighborhoodUser, idUser,profilePictureUser, url)
             form.reset()
+            //return the original button styles
+            idDocumentUserButton.className = "userFile-button"
+
             successAlert("El usuario se agrego exitosamente")
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")

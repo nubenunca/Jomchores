@@ -1,15 +1,13 @@
-import "./FormWorker.scss"
+import "./FormWorker.scss";
 
 //Worker registration form
 
 export const FormWorker = () => {
+  let section = document.createElement("section");
+  section.className = "form-section";
 
-    let section = document.createElement("section");
-    section.className = "form-section";
-
-    section.innerHTML = 
-    `
-        <h1>Registrarse</h1>
+  section.innerHTML = `
+        <h1>Trabaja con nosotros</h1>
         <h4 class = "worker-subtitle">Aliado</h4>
 
         <form class = "worker-form">
@@ -192,7 +190,6 @@ export const FormWorker = () => {
                 </div>
             </div>
         </form>
-    `
-    return section
-}
-
+    `;
+  return section;
+};

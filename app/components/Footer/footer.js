@@ -1,3 +1,4 @@
+//inner code html in the document from javascript
 export function Footer() {
   const footer = document.createElement("footer");
   footer.setAttribute(
