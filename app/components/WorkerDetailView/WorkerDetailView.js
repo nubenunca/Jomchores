@@ -1,3 +1,5 @@
+// This function  will cans to show the page with the direct contact information to what'sapp
+
 export const WorkerDetailView = (props) => {
   let{name, lastName, img, id, category, workDescription,neighborhood,cost} = props
   const detailWorker = document.createElement("worker-detail");
@@ -29,6 +31,7 @@ export const WorkerDetailView = (props) => {
   return detailWorker;
 };
 
+// This function create the format currency for the price of worker
 function currencyFormatter(valor) {
   return valor.toLocaleString('es-CO', {
     style: 'currency',

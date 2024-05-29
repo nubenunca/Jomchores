@@ -7,7 +7,7 @@ import { globalMain } from "./components/Home/Home";
 import { LogIn, LogInValidation } from "./components/LogIn/LogIn";
 import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 import { addUser, addWorker } from "./js/formFunctions";
-import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
+
 
 // Path file, according to the path each component is rendered.
 
@@ -23,6 +23,7 @@ export const Router = () => {
     main.append(AboutUs());
   }  else if (hash == "#/servicios") {
     main.append(serviceCards());
+    
   } else if (hash == "#/registro") {
     main.append(FormUser());
     addUser()
@@ -30,9 +31,8 @@ export const Router = () => {
     main.append(FormWorker());
     addWorker();
   
-  } else if(hash == "#/trabajo") {
-    main.append(WorkerDetailView());
-  }else if(hash == "#/log-in") {
+  } 
+  else if(hash == "#/log-in") {
     main.append(LogIn());
     LogInValidation()
   } else if(hash == "#/gestionar-trabajadores") {
@@ -42,7 +42,10 @@ export const Router = () => {
     }else{
       main.append(globalDelete())
     }
-  } else {
+  } 
+  else {
+
+    //Create the function that will call the single card information
     const url = "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers";
     async function singleCard (){
       const response = await fetch(url);
