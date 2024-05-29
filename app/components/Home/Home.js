@@ -5,6 +5,35 @@ import "./Home.scss"
 //Se crea el contenedor
 const main = document.createElement("section")
 
+function createWhatsappButtonSection() {
+    const wpSection = document.createElement("section")
+    wpSection.classList.add(
+        "border", 
+        "border-success", 
+        "bg-success", 
+        "rounded-circle", 
+        "d-flex", 
+        "contenedor-boton-whatsapp",
+        "justify-content-center",
+        "align-items-center",
+        "animate__animated", 
+        "animate__pulse", 
+        "animate__slow", 
+        "animate__infinite"
+    )
+    wpSection.innerHTML = ""
+    return wpSection
+}
+
+const WhatsappButtonsection = main.appendChild(createWhatsappButtonSection())
+function createWhatsappButton() {
+    WhatsappButtonsection.innerHTML = `
+    <a href="https://wa.me/17865432489" target="_blank"><i class="bi bi-whatsapp text-white icono-whatsapp fs-2"></i></a>
+        `
+}
+
+createWhatsappButton()
+
 function createTitle(titleText) {
   const title = document.createElement("h2")
   title.classList.add("text-center", "fw-bold", "display-3")
@@ -13,7 +42,7 @@ function createTitle(titleText) {
 }
 
 main.appendChild(
-  createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
+    createTitle(`¿A quién necesitas para <span class="text-dark-blue">resolver</span> tu <span class="text-dark-blue">problema</span>?
 `)
 )
 
@@ -26,7 +55,7 @@ function createSection() {
     "justify-content-center",
     "align-content-center",
     "gap-2"
-  );
+  )
   section.innerHTML = ""
   return section
 }
@@ -36,9 +65,9 @@ const section = main.appendChild(createSection())
 async function createCardService() {
   const response = await fetch(
     "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/services"
-  );
+  )
   const data = await response.json()
-  section.innerHTML = "";
+  section.innerHTML = ""
   data.forEach((service) => {
     section.innerHTML += `
         <div class="card col-sm-12 col-md-12 mt-3 shadow p-3 mb-5 bg-body-tertiary rounded animate__animated animate__backInLeft" style="width: 18rem;">
@@ -46,31 +75,31 @@ async function createCardService() {
             <div class="card-body">
                 <h5 class="card-title text-center" style="height:48px;">${service.title}</h5>
                 <p class="card-text text-center" style="height:96px;">${service.description}</p>
-                <a href="#" class="btn btn-red text-white fw-medium d-flex align-content-center justify-content-center animate__animated animate__pulse animate__slower animate__infinite">${service.callToAction}</a>
+                <a href="#/servicios" class="btn btn-red bg-red text-white fw-medium d-flex align-content-center justify-content-center animate__animated animate__pulse animate__slower animate__infinite">${service.callToAction}</a>
             </div>
         </div>
-        `;
-  });
+        `
+    })
 }
 
-createCardService();
+createCardService()
 
 //This function create the carousel
 function createSectionTwo() {
   const sectionTwo = document.createElement("section")
   sectionTwo.classList.add("container-fluid")
   sectionTwo.innerHTML = ""
-  return sectionTwo;
+  return sectionTwo
 }
 
 const sectionTwo = main.appendChild(createSectionTwo())
 
 function createCarousel() {
-  sectionTwo.innerHTML = `
+    sectionTwo.innerHTML = `
         <div data-aos="fade-up-right" data-aos-once="false" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
             <div class="carousel-inner" style="height:450px;">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://tecnociencias.s3.amazonaws.com/comments_4.jpeg" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
+                <img src="https://tecnociencias.s3.amazonaws.com/banner_4.png" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://tecnociencias.s3.amazonaws.com/banner_1.png" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
@@ -114,9 +143,9 @@ function createSectionThree() {
     "justify-content-center",
     "align-content-center",
     "gap-2"
-  );
+  )
   sectionThree.innerHTML = ""
-  return sectionThree;
+  return sectionThree
 }
 
 main.appendChild(createTitle(`Lo que piensan nuestros usuarios`))
@@ -125,7 +154,7 @@ const sectionThree = main.appendChild(createSectionThree())
 async function createComments() {
   const response = await fetch(
     "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
-  );
+  )
   const data = await response.json()
   sectionThree.innerHTML = ""
   data.forEach((comment) => {
@@ -143,11 +172,11 @@ async function createComments() {
                 </div>
             </div>
         </div>
-        `;
-  });
+        `
+    })
 }
 
-createComments();
+createComments()
 
 //This function create the most demanded services
 function createSectionFour() {
@@ -155,14 +184,14 @@ function createSectionFour() {
   sectionFour.classList.add("container-fluid")
   sectionFour.setAttribute("data-aos", "fade-up", "data-aos-once", "false")
   sectionFour.innerHTML = ""
-  return sectionFour;
+  return sectionFour
 }
 
 const sectionFour = main.appendChild(createSectionFour())
 
 function createGraphic() {
-  sectionFour.innerHTML = `
-        <h2 class="text-center fw-bold display-3 mb-3">Servicios más demandados</h2>
+    sectionFour.innerHTML = `
+        <h2 class="text-center fw-bold display-5 mb-3">Servicios más demandados</h2>
         <h5 class="text-start fw-bold">Electricistas</h5>
         <div class="progress mb-2" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success fw-medium" style="width: 50%">50%</div>
@@ -179,7 +208,7 @@ function createGraphic() {
         <div class="progress mb-2" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger fw-medium" style="width: 10%">10%</div>
         </div>
-        `;
+        `
 }
 
 createGraphic()

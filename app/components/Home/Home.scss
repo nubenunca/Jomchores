@@ -21,4 +21,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
-//aquí van los estilos del botón de wpp 
+.contenedor-boton-whatsapp{
+  z-index: 7;
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+}
