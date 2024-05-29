@@ -124,7 +124,7 @@ const sectionThree = main.appendChild(createSectionThree());
 
 async function createComments() {
   const response = await fetch(
-    "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
+    "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments" //AWS API GATEWAY COMMENTS URL
   );
   const data = await response.json();
   sectionThree.innerHTML = "";
