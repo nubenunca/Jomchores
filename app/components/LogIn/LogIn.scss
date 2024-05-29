@@ -1,0 +1,42 @@
+@import "/src/scss/style.scss";
+
+.login-section{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #login-form{
+        width: 100%;
+        min-height: calc(100vh - 200px - 147px);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+
+        .input-admin{
+            width: 100%;
+            max-width: 500px;
+            height: 43px;
+            padding: 0 10px;
+            border: solid 1px  $gray-form;
+            border-radius: 10px;
+        }
+
+        .buttonSendAdmin-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .sendAdmin-button{
+            width: 100px;
+            height: 35px;
+            background-color: $dark-blue;
+            color: $white;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}

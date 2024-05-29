@@ -1,13 +1,14 @@
 
 
 import "./Header.scss";
+import "../Card/Card.js"
 
 export function Header() {
   const header = document.createElement("header");
 
   header.innerHTML = `
 
-    <section class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <section class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
         <img class="logo-header animate__animated animate__headShake animate__delay-5s animate__infinite animate__slower" src="./public/img/logo_blanco.ico" alt="logo-Jomchores">

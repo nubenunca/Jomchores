@@ -181,7 +181,55 @@ export const FormWorker = () => {
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Terminos y condiciones</h1>
                     </div>
                     <div class="modal-body">
-                        <p>Jomchores</p>
+                        <h3>Política de Privacidad y Exención de Responsabilidad</h3>
+                        <p>Bienvenido a Jomchores. Nos dedicamos a simplificar tu vida conectándote con profesionales capacitados y confiables para satisfacer tus necesidades de mantenimiento y reparación en el hogar. A continuación, te presentamos nuestra Política de Privacidad y Exención de Responsabilidad, la cual debes leer y aceptar para usar nuestra aplicación.</p>
+
+                        <h6>1. Recopilación y Uso de Información</h6>
+
+                        <p>En Jomchores, valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Recopilamos información para mejorar nuestra plataforma y ofrecerte el mejor servicio posible. Los datos que recopilamos incluyen:</p>
+
+
+                        <p>Información Personal: Nombre, dirección, correo electrónico y número de teléfono. </p>
+                        <p>Información de Uso: Detalles de cómo interactúas con nuestra aplicación, incluidas las páginas visitadas, el tiempo de uso y las preferencias.</p>
+                        <p>Información de Ubicación: Datos de geolocalización para conectar con profesionales cercanos.</p>
+
+                        <h6>Usamos esta información para:</h6>
+
+                        <p>Facilitar la conexión con profesionales del hogar.</p>
+                        <p>Mejorar y personalizar tu experiencia en nuestra plataforma</p>
+                        <p>Procesar pagos y emitir facturas.</p>
+                        <p>Enviar comunicaciones importantes y actualizaciones del servicio.</p>
+
+                        <h6>2. Compartición de Información</h6>
+
+                        <p>Jomchores no comparte tu información personal con terceros sin tu consentimiento, excepto en los siguientes casos:</p>
+                        
+                        <p>Con profesionales para realizar el servicio solicitado.</p>
+                        <p>Con proveedores de servicios que nos ayudan a operar nuestra plataforma (ej. procesadores de pagos).</p>
+                        <p>Para cumplir con obligaciones legales o proteger los derechos y la seguridad de Jomchores y sus usuarios.</p>
+
+                        <h6>3. Seguridad de los Datos</h6>
+
+                        <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información contra el acceso no autorizado, la pérdida o la alteración. Sin embargo, ningún sistema es completamente seguro, y no podemos garantizar la seguridad absoluta de tus datos.</p>
+
+                        <h6>4. Exención de Responsabilidad </h6>
+
+                        <p>En Jomchores, facilitamos la conexión entre usuarios y profesionales independientes para servicios de mantenimiento y reparación del hogar. Sin embargo, no asumimos responsabilidad por daños, lesiones o agravios que puedan ocurrir durante la prestación de los servicios.</p>
+
+                        <h6>Al usar nuestra aplicación, entiendes y aceptas que:</h6>
+
+                        <p>Jomchores no ofrece los servicios directamente, sino que actúa como un intermediario.</p>
+                        <p>Jomchores no ofrece los servicios directamente, sino que actúa como un intermediario. </p>
+                        <p>Los profesionales son contratistas independientes y no empleados de Jomchores. </p>
+                        <p>No somos responsables de la conducta, calidad, cumplimiento o resultados de los servicios proporcionados por los profesionales. </p>
+
+                        <h6>5. Modificaciones a la Política de Privacidad </h6>
+                        <p> Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Te notificaremos sobre cambios significativos a través de nuestra aplicación o por correo electrónico. El uso continuo de nuestra plataforma después de tales modificaciones constituye tu aceptación de los cambios.</p>
+
+                        <h6>6. Contacto </h6>
+                        <p>Si tienes preguntas o inquietudes sobre esta Política de Privacidad, puedes contactarnos en: contacto@jomchores.com</p>
+
+                        <h6>Al registrarte y utilizar Jomchores, confirmas que has leído, entendido y aceptado esta Política de Privacidad y Exención de Responsabilidad.</h6>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

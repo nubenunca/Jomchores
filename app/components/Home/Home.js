@@ -5,8 +5,6 @@ import "./Home.scss";
 //Se crea el contenedor
 const main = document.createElement("section");
 
-//aquí va la la función de crear botón
-
 function createTitle(titleText) {
   const title = document.createElement("h2");
   title.classList.add("text-center", "fw-bold", "display-3");

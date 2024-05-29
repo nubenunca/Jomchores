@@ -1,33 +1,39 @@
-export const WorkerDetailView = () => {
+export const WorkerDetailView = (props) => {
+  let{name, lastName, img, id, category, workDescription,neighborhood,cost} = props
   const detailWorker = document.createElement("worker-detail");
-
+  cost = parseInt(cost)
+  let costid= currencyFormatter(cost)
   detailWorker.innerHTML = `
 <div class="worker-container">
-<h1 class="name-worker">Rafael González</h1>
+<h1 class="name-worker text-capitalize">${name} ${lastName}</h1>
 <figure class="img-photo-worker">
   <img
     class="photo-worker"
-    src="https://media.istockphoto.com/id/1346124841/es/foto/pensamiento-exitoso-del-trabajador-del-sitio-de-construcci%C3%B3n.jpg?s=612x612&w=0&k=20&c=aNZUadteECWp2tzIWt_RQPInVvzqNkMyAtfrneVTX3k="
-    alt=""
+    src="${img}"
+    alt="Imagen de ${id}"
   />
 </figure>
-<h2 class="service-worker">Reparación de tuberías</h2>
-<p class="work-experience">
-  Listo para solucionar cualquier problema que tengas con tus
-  tuberías. Ya sea una fuga, un atasco o cualquier otro inconveniente,
-  estoy aquí para asegurar que todo vuelva a funcionar perfectamente
-  en tu hogar. Con años de experiencia, herramientas adecuadas y un
-  servicio amigable y profesional, te garantizo soluciones eficientes
-  y duraderas a precios competitivos.
+<h2 class="service-worker text-capitalize">${category}</h2>
+<p class="work-experience text-capitalize">
+  ${workDescription}
 </p>
 </div>
 <div class="worker-qualification">
 <div class="container-name-stars-neighborhood">
-  <p class="worker-neighborhood">Buenos aires</p>
-  <h3 class="worker-service-price">$50.000</h3>
-  <button class="contact"><a href="">Contactar</a></button>
+  <p class="worker-neighborhood">${neighborhood}</p>
+  <h3 class="worker-service-price"> ${costid}</h3>
+  <button class="contact"><a href="https://api.whatsapp.com/send?phone=17865432489&text=Hola%2C%20estoy%20interesado%20en%20contratar%20los%20servicios%20del%20id%20${id}">Contactar</a></button>
 </div>
 </div>
 `;
   return detailWorker;
 };
+
+function currencyFormatter(valor) {
+  return valor.toLocaleString('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+}
