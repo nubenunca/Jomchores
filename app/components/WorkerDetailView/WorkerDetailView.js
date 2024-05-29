@@ -2,7 +2,7 @@
 
 export const WorkerDetailView = (props) => {
   let{name, lastName, img, id, category, workDescription,neighborhood,cost} = props
-  const detailWorker = document.createElement("worker-detail");
+  const detailWorker = document.createElement("worker-detail")
   cost = parseInt(cost)
   let costid= currencyFormatter(cost)
   detailWorker.innerHTML = `
@@ -16,7 +16,7 @@ export const WorkerDetailView = (props) => {
   />
 </figure>
 <h2 class="service-worker text-capitalize">${category}</h2>
-<p class="work-experience text-capitalize">
+<p class="work-experience lh-bas">
   ${workDescription}
 </p>
 </div>
@@ -24,12 +24,12 @@ export const WorkerDetailView = (props) => {
 <div class="container-name-stars-neighborhood">
   <p class="worker-neighborhood">${neighborhood}</p>
   <h3 class="worker-service-price"> ${costid}</h3>
-  <button class="contact"><a href="https://wa.me/17865432489${id}" target="_blank">Contactar</a></button>
+  <button class="contact"><a href="https://api.whatsapp.com/send?phone=17865432489&text=Hola%2C%20Quiero%20contratar%20al%20t%C3%A9cnico%20o%20profesional%20${name}%20${lastName}%20con%20id%20${id}" target="_blank">Contactar</a></button>
 </div>
 </div>
-`;
-  return detailWorker;
-};
+`
+  return detailWorker
+}
 
 // This function create the format currency for the price of worker
 function currencyFormatter(valor) {
@@ -38,5 +38,5 @@ function currencyFormatter(valor) {
     currency: 'COP',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
-  });
+  })
 }

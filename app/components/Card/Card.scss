@@ -1,3 +1,5 @@
+//Import the variable of styles
+
 @import "/src/scss/style.scss";
 
 .section-container{
@@ -61,6 +63,7 @@
     }
 }
 
+// This styles applies to the tags that aren't modificated by boostrap
 .title-services{
     font-weight: bold !important;
     color: $dark-blue !important;

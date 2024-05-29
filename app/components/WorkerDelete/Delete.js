@@ -1,16 +1,17 @@
-import { alertSmallSuccess } from "./Alerts";
+//Import the styles of module and alert js
+import { alertSmallSuccess } from "./Alerts"
 import "./Delete.scss"
 
-const CrudDeleteSection = document.createElement('section');
-
+const CrudDeleteSection = document.createElement('section')
+//Create a function implement the table on HTML
 function createTable() {
-    const table = document.createElement('article');
-    table.classList.add("container-fluid", "table-responsive");
-    table.innerHTML = "";
-    return table;
+    const table = document.createElement('article')
+    table.classList.add("container-fluid", "table-responsive")
+    table.innerHTML = ""
+    return table
 }
 
-const addTable = CrudDeleteSection.appendChild(createTable());
+const addTable = CrudDeleteSection.appendChild(createTable())
 function table() {
     addTable.innerHTML = `
         <table class="table table-striped text-center align-middle table-hover">
@@ -33,7 +34,7 @@ function table() {
 
 table()
 
-
+// Handle the database connection
 async function index() {
     const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")//Llamamos a los datos
     const data = await response.json() //convert JSON to Javascript
@@ -78,14 +79,14 @@ async function deleteItem(id) {
 }
 
 export function globalDelete(){
-    const deleteHtml = CrudDeleteSection;
-    return deleteHtml;
+    const deleteHtml = CrudDeleteSection
+    return deleteHtml
 }
 
 // ADD EVENT LISTENER to sing out
 CrudDeleteSection.addEventListener("click", (event)=>{
     if(event.target.classList.contains("log-out")){
-        localStorage.removeItem('profile');
+        localStorage.removeItem('profile')
         window.location.hash = ""
     }
 })
