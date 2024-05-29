@@ -27,9 +27,9 @@ export const WorkerDetailView = (props) => {
   <button class="contact"><a href="https://wa.me/17865432489${id}" target="_blank">Contactar</a></button>
 </div>
 </div>
-`;
-  return detailWorker;
-};
+`
+  return detailWorker
+}
 
 // This function create the format currency for the price of worker
 function currencyFormatter(valor) {
