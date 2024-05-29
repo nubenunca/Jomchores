@@ -1,4 +1,5 @@
 import { alertSmallSuccess } from "./Alerts";
+import "./Delete.scss"
 
 const CrudDeleteSection = document.createElement('section');
 
@@ -25,6 +26,8 @@ function table() {
             <tbody id="tbody">
             </tbody>
         </table>
+
+        <button class="log-out">Cerrar sesión</button>
     `
 }
 
@@ -32,7 +35,7 @@ table()
 
 
 async function index() {
-    const response = await fetch("http://localhost:3000/workers")//Llamamos a los datos
+    const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")//Llamamos a los datos
     const data = await response.json() //convertimos los datos de JSON a Javascript
     console.log(data);
     tbody.innerHTML = ""
@@ -62,9 +65,16 @@ CrudDeleteSection.addEventListener('click', async function (event) {
 })
 
 async function deleteItem(id) {
-    //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UNA CATEGORIA
-    await fetch(`http://localhost:3000/workers/${id}`, {
-        method: 'DELETE'
+    //ACA DEBEMOS PROGRAMAR LA PETICION PARA ELIMINAR UN TRABAJADOR
+    const workerToDelete = {
+        id
+    } 
+    await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(workerToDelete)
     })
     alertSmallSuccess("Aliado eliminado exitosamente")
 }
@@ -73,5 +83,13 @@ export function globalDelete(){
     const deleteHtml = CrudDeleteSection;
     return deleteHtml;
 }
+
+// ADD EVENT LISTENER PARA CERRAR SESION
+CrudDeleteSection.addEventListener("click", (event)=>{
+    if(event.target.classList.contains("log-out")){
+        localStorage.removeItem('profile');
+        window.location.hash = ""
+    }
+})
 
 globalDelete();

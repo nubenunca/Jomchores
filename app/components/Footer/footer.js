@@ -8,7 +8,7 @@ export function Footer() {
   footer.innerHTML = ` 
  <div class="secciones-footer">
     <a href="#/quienes-somos">¿Quiénes somos?</a>
-    <a href="#">Servicios</a>
+    <a href="#/servicios">Servicios</a>
     <a href="#/registro">Regístrate</a>
     <a href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
 </div>
@@ -24,13 +24,13 @@ export function Footer() {
 <div class="icon-footer">
   <ul class="icon-list">
     <li>
-      <a href=""><i class="bx bxl-facebook-circle"></i></a>
+      <a href="https://web.facebook.com/" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
     </li>
     <li>
-      <a href=""><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
     </li>
     <li>
-      <a href="">
+      <a href="mailto:ayudas@jomchores.com">
         <i class="bx bx-envelope"></i>
       </a>
     </li>
