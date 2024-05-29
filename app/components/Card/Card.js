@@ -1,51 +1,8 @@
-import "./Card.scss"
 import "../../../src/scss/style.scss"
+import "../Card/Card.scss"
 
 
-// export let  workers = [
-//     {
-//         name: "Santiago",
-//         lastName: "Suarez",
-//         phone: 234424522,
-//         address: "cra 22 #23-32",
-//         id: 123456789,
-//         img: "https://img.freepik.com/psd-gratis/hombre-elegante-brazos-cruzados_1154-563.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715040000&semt=ais",
-//         category: "Plomeria",
-//         occupation : "Especialista en tuberias"
-//     },
-//     {
-//         name: "Laura",
-//         lastName: "Gomez",
-//         phone: 311567890,
-//         address: "cll 45 #56-78",
-//         id: 987654321,
-//         img: "https://img.freepik.com/psd-gratis/mujer-elegante-brazos-cruzados_1154-564.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715040000&semt=ais",
-//         category: "Electricidad",
-//         occupation: "Electricista certificada"
-//     },
-//     {
-//         name: "Carlos",
-//         lastName: "Perez",
-//         phone: 320123456,
-//         address: "cra 10 #11-12",
-//         id: 112233445,
-//         img: "https://img.freepik.com/psd-gratis/hombre-elegante-brazos-cruzados_1154-565.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715040000&semt=ais",
-//         category: "Carpintería",
-//         occupation: "Maestro carpintero"
-//     },
-//     {
-//         name: "Mariana",
-//         lastName: "Rodriguez",
-//         phone: 315789012,
-//         address: "av 19 #20-21",
-//         id: 334455667,
-//         img: "https://img.freepik.com/psd-gratis/mujer-elegante-brazos-cruzados_1154-566.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715040000&semt=ais",
-//         category: "Jardinería",
-//         occupation: "Paisajista profesional"
-//     }
-// ]
-
-//Se crea el contenedor
+//create the container and add to main
 
 const main = document.createElement('section');
 
@@ -56,9 +13,10 @@ function createTitles(){
     return sectionOne
 }
 
+
 const section = main.appendChild(createTitles())
 
-
+// Create the buttons in the container section and execute
 function titles(){
    
  
@@ -78,6 +36,9 @@ function titles(){
 
 titles()
 
+
+// Create the cards section and add to the main
+
 function createCards() {
     const sectionTwo = document.createElement("section");
     sectionTwo.className = "section-container m-5 d-flex flex-wrap gap-5 justify-content-center"
@@ -86,7 +47,7 @@ function createCards() {
 }
 const sectionTwo = main.appendChild(createCards())
 
-
+// This function is responsible for create the cards in the section
 async function createCardWorker() {
 const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers");
 const data = await response.json(); 
@@ -97,12 +58,12 @@ data.forEach(worker => {
     <div class = "card-container" style="width:18rem"> 
         <h4 class = "worker-title text-capitalize">${worker.name} ${worker.lastName}</h4>
         <article class="img-container">
-            <img src= ${worker.img} alt="">
+            <img src= ${worker.img} alt="Photo's worker">
         </article>
         <article class = "occupation-container text-capitalize ">
-            <p class = "occupation-description text-capitalize text-left">${worker.workDescription}</p>
+            <p class = "occupation-description text-capitalize text-left">${worker.category}</p>
         </article>
-        <a href = "#/${worker.name}-${worker.lastName}" class = "view-more" id = "${worker.id}">Ver mas</a>
+        <a href="#/trabajo"  class = "view-more" id = "${worker.id}">Ver más</a>
     </div>
     `
 
@@ -111,20 +72,19 @@ data.forEach(worker => {
 
 createCardWorker()
 
-// export const Card = (workers) => {
 
-//     let {name, lastName, occupation, img,id} = workers;
-
-
-//     sectionTwo.innerHTML += 
-// `
-    
-    
-// `
-//     return sectionTwo
+function listenerCllick() {document.addEventListener("click", (event) => {
    
-// }
+    if(event.target.className=="view-more"){
+        localStorage.setItem("id", event.target.id);
+        
+        
+    }
+})}
 
+listenerCllick()
+
+// This function will export the content created
 
 export function serviceCards(){
     const mainHtml = main;
