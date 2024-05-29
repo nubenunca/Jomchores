@@ -151,7 +151,7 @@ function createSectionThree() {
 main.appendChild(createTitle(`Lo que piensan nuestros usuarios`))
 const sectionThree = main.appendChild(createSectionThree())
 
-//This function create the commentss
+//This function create the comments
 async function createComments() {
   const response = await fetch(
     "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
