@@ -312,6 +312,8 @@ export function addUser(){
             //return the original button styles
             idDocumentUserButton.className = "userFile-button"
 
+            const section = document.querySelector("form-section");
+
             successAlert("El usuario se agrego exitosamente")
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")
