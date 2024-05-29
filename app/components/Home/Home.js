@@ -36,7 +36,7 @@ createWhatsappButton();
 
 function createTitle(titleText) {
     const title = document.createElement("h2");
-    title.classList.add("text-center", "fw-bold", "display-3");
+    title.classList.add("text-center", "fw-bold", "display-4");
     title.innerHTML = titleText;
     return title;
 }
@@ -191,7 +191,7 @@ const sectionFour = main.appendChild(createSectionFour());
 
 function createGraphic() {
     sectionFour.innerHTML = `
-        <h2 class="text-center fw-bold display-3 mb-3">Servicios más demandados</h2>
+        <h2 class="text-center fw-bold display-5 mb-3">Servicios más demandados</h2>
         <h5 class="text-start fw-bold">Electricistas</h5>
         <div class="progress mb-2" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success fw-medium" style="width: 50%">50%</div>
