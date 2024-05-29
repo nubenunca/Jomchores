@@ -7,7 +7,7 @@ export const FormWorker = () => {
   section.className = "form-section";
 
   section.innerHTML = `
-        <h1>Trabaja con nosotros</h1>
+        <h1>Registrar Servicio</h1>
         <h4 class = "worker-subtitle">Aliado</h4>
 
         <form class = "worker-form">
