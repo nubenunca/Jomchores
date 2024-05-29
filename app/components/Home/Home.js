@@ -123,7 +123,9 @@ main.appendChild(createTitle(`Lo que piensan nuestros usuarios`));
 const sectionThree = main.appendChild(createSectionThree());
 
 async function createComments() {
-  const response = await fetch("http://localhost:3000/comments");
+  const response = await fetch(
+    "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/coments"
+  );
   const data = await response.json();
   sectionThree.innerHTML = "";
   data.forEach((comment) => {
