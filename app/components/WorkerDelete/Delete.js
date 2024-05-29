@@ -37,7 +37,6 @@ table()
 async function index() {
     const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")//Llamamos a los datos
     const data = await response.json() //convertimos los datos de JSON a Javascript
-    console.log(data);
     tbody.innerHTML = ""
     data.forEach(element => {
         tbody.innerHTML += `
