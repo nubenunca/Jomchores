@@ -7,7 +7,6 @@ import { globalMain } from "./components/Home/Home";
 import { LogIn, LogInValidation } from "./components/LogIn/LogIn";
 import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 import { addUser, addWorker } from "./js/formFunctions";
-import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 
 // Path file, according to the path each component is rendered.
 
@@ -21,43 +20,40 @@ export const Router = () => {
     main.append(globalMain());
   } else if (hash == "#/quienes-somos") {
     main.append(AboutUs());
-  }  else if (hash == "#/servicios") {
+  } else if (hash == "#/servicios") {
     main.append(serviceCards());
   } else if (hash == "#/registro") {
     main.append(FormUser());
-    addUser()
+    addUser();
   } else if (hash == "#/trabajo-con-nosotros") {
     main.append(FormWorker());
     addWorker();
-  
-  } else if(hash == "#/trabajo") {
+  } else if (hash == "#/trabajo") {
     main.append(WorkerDetailView());
-  }else if(hash == "#/log-in") {
+  } else if (hash == "#/log-in") {
     main.append(LogIn());
-    LogInValidation()
-  } else if(hash == "#/gestionar-trabajadores") {
+    LogInValidation();
+  } else if (hash == "#/gestionar-trabajadores") {
     const user = localStorage.getItem("profile");
-    if(user == null){
-      window.location.hash = ""
-    }else{
-      main.append(globalDelete())
+    if (user == null) {
+      window.location.hash = "";
+    } else {
+      main.append(globalDelete());
     }
   } else {
-    const url = "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers";
-    async function singleCard (){
+    const url =
+      "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers";
+    async function singleCard() {
       const response = await fetch(url);
       const data = await response.json();
 
-
       const dataFilter = data.forEach((worker) => {
-        if(worker.id == localStorage.getItem("id")){
-          main.append(WorkerDetailView(worker))
+        if (worker.id == localStorage.getItem("id")) {
+          main.append(WorkerDetailView(worker));
         }
-      })
+      });
     }
-    singleCard ()
-    let id = localStorage.getItem("id")
-   
-    
+    singleCard();
+    let id = localStorage.getItem("id");
   }
 };
