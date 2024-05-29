@@ -18,7 +18,7 @@ export const AboutUs = () => {
 
 
         </div>
-        <button class="register-button animate__animated animate__pulse animate__slower animate__infinite"><a href="">Registrarme </a></button>
+        <button class="register-button animate__animated animate__pulse animate__slower animate__infinite"><a href="#/trabajo-con-nosotros">Registrarme </a></button>
       </div>`;
 
   return section;
