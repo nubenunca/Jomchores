@@ -100,7 +100,7 @@ function createCarousel() {
         <div data-aos="fade-up-right" data-aos-once="false" id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
             <div class="carousel-inner" style="height:450px;">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://tecnociencias.s3.amazonaws.com/comments_4.jpeg" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
+                <img src="https://tecnociencias.s3.amazonaws.com/banner_4.png" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://tecnociencias.s3.amazonaws.com/banner_1.png" class="d-block w-100 object-fit-fill border rounded" alt="image carousel">
