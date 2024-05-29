@@ -1,4 +1,4 @@
-
+//se realizan los estilos con la librería, de acuerdo al componente y las clases heredadas
 li{
     list-style: none;
   
@@ -7,12 +7,13 @@ footer{
     background-color: #4D5C93;
     display: flex;
     flex-direction: column;
-    color:#FFFFFF;
+    margin-bottom: 0;
 
     .secciones-footer{
         display: flex;
         flex-direction: column;
         padding-left: 20px;
+
 
         a{
             text-decoration: none;

@@ -1,0 +1,86 @@
+.worker-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+    margin: 30px;
+
+    .photo-worker{
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+        -webkit-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+        -moz-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+        box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.3);
+
+    }
+}
+
+.work-experience{
+            display: flex;
+            text-align: justify;
+            text-align-last: center;
+            line-height: 1.5; 
+            width: 80%; 
+            justify-content: center;  
+        }
+        .stars-rating{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 400px;
+           
+            
+        }
+
+.worker-qualification{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+            .container-name-stars-neighborhood{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+                    .bxs-star{
+                        display: flex;
+                        color:#FFCB5C;
+                        background-color: none;
+                        font-size: 25px;
+                    }
+
+                        .contact{
+                            border: none;
+                            width: 150px;
+                            height: 50px;
+                            color: white;
+                            background-color:#7488C3;
+                            border-radius: 10px;
+                            -webkit-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                            -moz-box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                            box-shadow: 3px 10px 5px -4px rgba(0,0,0,0.55);
+                        }
+                            
+                            a{
+                                text-decoration: none;
+                                color: white;
+                    
+                            }
+
+    }
+    @media (min-width: 700px){
+        .work-experience{
+            display: flex;
+            text-align: justify;
+            text-align-last: center;
+            line-height: 1.5; 
+            width: 40%;    
+
+        }
+    }

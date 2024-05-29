@@ -1,0 +1,31 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Create your own map
+$custom-colors: (
+  "dark-blue": #4D5C93,
+  "light-blue": #7488C3,
+  "gray": #B8B7D1,
+  "yellow": #FFCB5C,
+  "red": #FF6E61,
+  "white": #FFFFFF,
+  "black": #000000
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+.contenedor-boton-whatsapp{
+  z-index: 7;
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+}

@@ -1,14 +1,17 @@
-import "./Header.scss"
+
+
+import "./Header.scss";
+import "../Card/Card.js"
 
 export function Header() {
-    const header = document.querySelector("header")
+  const header = document.createElement("header");
 
-    header.innerHTML = `
+  header.innerHTML = `
 
-    <header class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <section class="contenedor-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <img class="logo-header" src="./public/img/logo transparente blanco+.png" alt="logo-Jomchores">
+        <img class="logo-header animate__animated animate__headShake animate__delay-5s animate__infinite animate__slower" src="./public/img/logo_blanco.ico" alt="logo-Jomchores">
         </a>
       </div>
 
@@ -25,25 +28,23 @@ export function Header() {
               <a class="nav-link items" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link items" href="#">¿Quiénes somos?</a>
+              <a class="nav-link items" href="#/quienes-somos">¿Quiénes somos?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link items" href="#">Servicios</a>
+              <a class="nav-link items" id="services-reload" href="#/servicios">Servicios</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link items" href="#">Registro</a>
+            <a class="nav-link items" href="#/registro">Registro</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link items" href="#">Trabaja con nosotros</a>
+            <a class="nav-link items" href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
             </li>
         </ul>
         </div>
       </div>
-    </nav>
+    </nav>      
+    </section>
 
-      
-    </header>
- 
-
-
-`}
+`;
+  return header;
+}
