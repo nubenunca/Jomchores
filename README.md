@@ -1,40 +1,62 @@
 # Jomchores
 
-Descripción
+Description
 
-En Jomchores, nos dedicamos a simplificar tu vida conectándote con profesionales capacitados y confiables para satisfacer tus necesidades de mantenimiento y reparación en el hogar.
+At Jomchores, we are dedicated to simplifying your life by connecting you with skilled and reliable professionals to meet your home maintenance and repair needs.
 
-Nuestro objetivo es abordar la creciente falta de tiempo y la dificultad para encontrar proveedores de servicios de confianza. Entendemos que buscar profesionales calificados puede ser abrumador, y por eso hemos creado una solución que garantiza una experiencia segura, confiable y conveniente tanto para usuarios como para profesionales independientes.
+Our goal is to address the growing lack of time and difficulty in finding reliable service providers. We understand that searching for qualified professionals can be overwhelming, which is why we have created a solution that ensures a safe, reliable and convenient experience for both homeowners and independent professionals.
 
-Instalación:
+Why?
+People today are struggling to find qualified and trusted professionals who can meet their home maintenance and repair needs immediately.
 
-# Clona el repositorio
+What for?
+
+The objective of the project is to develop a mobile application that facilitates the connection between users who require home services and qualified professionals, ensuring a safe, reliable and convenient experience for both parties. This gap between the demand for home services and the supply of qualified professionals creates an opportunity to develop a mobile professionals creates an opportunity to develop a solution that facilitates the connection between both parties in a secure and between both parties in a secure and convenient way.
+
+Who is it for?
+
+Our platform is accessible to all audiences, i.e. there is no distinction of gender, age or orientation to register either as an end user or partner; it is important to highlight that users face difficulties in finding the information they need.
+
+It is important to highlight that users face difficulties in finding qualified and trustworthy professionals who can meet their home maintenance and repair needs. On the other hand, independent professionals offering home services may face obstacles to promote their services effectively and reach their target audience, especially if they lack an online presence or are unfamiliar with the use of social media and digital platforms.
+
+# Installation:
+
+Clone the repository
 git clone https://github.com/nubenunca/Jomchores.git
 
-# Entra en el directorio del proyecto
+# Enter the project directory
+
 cd jomchores
 
-# Instala las dependencias
+# Install the dependencies
+
 npm install
 
-Descargar dependencia de encriptación de contraseña
+Download password encryption dependency
 npm install crypto-js
 
-Descargar dependencia de alertas 
+Download alerts dependency
 npm install sweetalert2
 
-Descargar dependencia de alertas 
-npm install sweetalert2
-
-Para correr el proyecto utilizar el siguiente comando: 
+To run the project use the following command:
 npm run dev
 
-# Características del proyecto.
-La aplicación sirve tanto para el registro de personas que estén buscando servicios como para los que quieren ofrecer sus servicios. Hay una vista de administrador que es "oculta" esta se accede con el siguiente hash:
+
+# Characteristics of the project.
+
+The application serves both for the registration of people who are looking for services and for those who want to offer their services. Furthermore there is a ‘hidden’ administrator view which is accessed with the following hash:
 
 /#/log-in
 
-El correo de administrador es: admin@jomchores.com
-La contraseña es: jomchores123
+The administrator email address is: admin@jomchores.com
+The password is: jomchores123
 
-Al ingresar se podrá observar una tabla con todos los trabajadores registrados y tiene la opción de removerlos.
+When you log in you will see a table with all the registered workers and you have the option to remove them.
+
+# Mock up
+https://www.figma.com/design/sJ1N9ynEM7mgoLD2LjwkyT/LIMA?node-id=0-1&t=cASZ0rCEQNUTxJnf-0
+
+# Task Manager
+
+https://marylin-nube-versa.atlassian.net/jira/software/projects/PL/list?groupBy=customfield_10016
+

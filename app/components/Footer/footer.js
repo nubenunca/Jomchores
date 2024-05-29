@@ -11,7 +11,7 @@ export function Footer() {
     <a href="#/quienes-somos">¿Quiénes somos?</a>
     <a href="#/servicios">Servicios</a>
     <a href="#/registro">Regístrate</a>
-    <a href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
+    <a href="#/trabajo-con-nosotros">Registrar servicio</a>
 </div>
 <div class="copy-right">
   <img
