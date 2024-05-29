@@ -144,6 +144,7 @@ export async function createWorker (name, lastName, email, username, password, p
     })
 }
 
+// Function that creates a new user
 async function createUser (name, lastName, email, username, password, phone, address, neighborhood, id,img, url){
 
     const newUser = {
@@ -251,8 +252,10 @@ export function addWorker(){
             certificationWorkerButton.className = "workerFile-button"
             idDocumentWorkerButton.className = "workerFile-button"
             policeRecordsWorkerButton.className = "workerFile-button"
-
             successAlert("El trabajador se agrego exitosamente")
+            window.location.hash = ""
+
+
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")
         }
@@ -295,6 +298,7 @@ export function addUser(){
     validateInformationWarning ("phone", phoneUser, url,phoneUserSpan, "número de celular")
     validateInformationWarning ("id", idUser, url,idUserSpan, "número de cedúla")
 
+    
     form.addEventListener("submit", async(event)=>{
         event.preventDefault()
         const checkPasswordUser = validatePasswords (passwordUser,verifyPasswordUser)
@@ -315,6 +319,8 @@ export function addUser(){
             const section = document.querySelector("form-section")
 
             successAlert("El usuario se agrego exitosamente")
+            window.location.hash = "#/servicios"
+            
         }else{
             failure("No se pudo registrar, revisa nuevamente los datos")
         }
