@@ -32,8 +32,8 @@ table()
 
 
 async function index() {
-    const response = await fetch("http://localhost:3000/workers")//Llamamos a los datos
-    const data = await response.json() //convertimos los datos de JSON a Javascript
+    const response = await fetch("http://localhost:3000/workers")//Call the info
+    const data = await response.json() //convert JSON data to javascript
     console.log(data);
     tbody.innerHTML = ""
     data.forEach(element => {
@@ -53,11 +53,10 @@ async function index() {
 index()
 
 CrudDeleteSection.addEventListener('click', async function (event) {
-    // ACA DEBEMOS LOCALIZAR A LOS ESCUCHADORES DE EVENTOS
-    if (event.target.classList.contains("btn-danger")) { //nos aseguramos que estamos presionando el botón rojo 
-        const id = event.target.getAttribute('data-id');//le sacamos el ID al botón rojo
-        await deleteItem(id)//enviamos el id a la función que se encarga de eliminar
-        await index()//Volvemos a recargar la lista
+    if (event.target.classList.contains("btn-danger")) { //we have to make sure that we are pressing the delete button
+        const id = event.target.getAttribute('data-id');//get the delete button id
+        await deleteItem(id)//send the id to the function in charge of deleting
+        await index()//get back to load the list
     }
 })
 
