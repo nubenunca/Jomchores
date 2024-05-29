@@ -7,6 +7,7 @@ import { globalMain } from "./components/Home/Home";
 import { LogIn, LogInValidation } from "./components/LogIn/LogIn";
 import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 import { addUser, addWorker } from "./js/formFunctions";
+import { WorkerDetailView } from "./components/WorkerDetailView/WorkerDetailView";
 
 // Path file, according to the path each component is rendered.
 
@@ -28,6 +29,7 @@ export const Router = () => {
   } else if (hash == "#/trabajo-con-nosotros") {
     main.append(FormWorker());
     addWorker();
+  
   } else if(hash == "#/trabajo") {
     main.append(WorkerDetailView());
   }else if(hash == "#/log-in") {
@@ -40,5 +42,22 @@ export const Router = () => {
     }else{
       main.append(globalDelete())
     }
+  } else {
+    const url = "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers";
+    async function singleCard (){
+      const response = await fetch(url);
+      const data = await response.json();
+
+
+      const dataFilter = data.forEach((worker) => {
+        if(worker.id == localStorage.getItem("id")){
+          main.append(WorkerDetailView(worker))
+        }
+      })
+    }
+    singleCard ()
+    let id = localStorage.getItem("id")
+   
+    
   }
 };
