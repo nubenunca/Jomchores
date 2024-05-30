@@ -1,8 +1,6 @@
 // Styles of the module
 import "./Home.scss"
 
-//Import the function
-
 //Create the container
 const main = document.createElement("section")
 
@@ -225,6 +223,3 @@ export function globalMain() {
 }
 
 globalMain()
-
-
-//This function will filter the content
