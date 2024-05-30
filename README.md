@@ -44,14 +44,7 @@ npm run dev
 
 # Characteristics of the project.
 
-The application serves both for the registration of people who are looking for services and for those who want to offer their services. Furthermore there is a ‘hidden’ administrator view which is accessed with the following hash:
-
-/#/log-in
-
-The administrator email address is: admin@jomchores.com
-The password is: jomchores123
-
-When you log in you will see a table with all the registered workers and you have the option to remove them.
+The application serves both for the registration of people who are looking for services and for those who want to offer their services.
 
 # Mock up
 https://www.figma.com/design/sJ1N9ynEM7mgoLD2LjwkyT/LIMA?node-id=0-1&t=cASZ0rCEQNUTxJnf-0
