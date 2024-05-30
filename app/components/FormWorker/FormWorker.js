@@ -1,19 +1,20 @@
-import "./FormWorker.scss";
+//Necessary import the styles of module
+import "./FormWorker.scss"
 
 //Worker registration form
 
 export const FormWorker = () => {
-  let section = document.createElement("section");
-  section.className = "form-section";
+  let section = document.createElement("section")
+  section.className = "form-section"
 
   section.innerHTML = `
-        <h1>Trabaja con nosotros</h1>
+        <h1>Registrar Servicio</h1>
         <h4 class = "worker-subtitle">Aliado</h4>
 
         <form class = "worker-form">
             <div class = "pcView-container">
                 <div class="inputWorker-container">
-                    <label for="name-worker">Nombre</label>
+                    <label for="name-worker text-capitalize">Nombre</label>
                     <input name="name-worker" id="name-worker" type="text" class = "input-worker" placeholder = "Rafael" required>
                 </div>
 
@@ -238,6 +239,6 @@ export const FormWorker = () => {
                 </div>
             </div>
         </form>
-    `;
-  return section;
-};
+    `
+  return section
+}

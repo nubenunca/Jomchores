@@ -1,10 +1,11 @@
+//Necessary import the styles of module
 
-
-import "./Header.scss";
+import "./Header.scss"
 import "../Card/Card.js"
 
+// Create the header element
 export function Header() {
-  const header = document.createElement("header");
+  const header = document.createElement("header")
 
   header.innerHTML = `
 
@@ -37,7 +38,7 @@ export function Header() {
             <a class="nav-link items" href="#/registro">Registro</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link items" href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
+            <a class="nav-link items" href="#/trabajo-con-nosotros">Registrar Servicio</a>
             </li>
         </ul>
         </div>
@@ -45,6 +46,6 @@ export function Header() {
     </nav>      
     </section>
 
-`;
-  return header;
+`
+  return header
 }

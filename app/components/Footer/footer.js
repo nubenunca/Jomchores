@@ -1,17 +1,17 @@
 //inner code html in the document from javascript
 export function Footer() {
-  const footer = document.createElement("footer");
+  const footer = document.createElement("footer")
   footer.setAttribute(
     "class",
     "d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top "
-  );
+  )
 
   footer.innerHTML = ` 
  <div class="secciones-footer">
     <a href="#/quienes-somos">¿Quiénes somos?</a>
     <a href="#/servicios">Servicios</a>
     <a href="#/registro">Regístrate</a>
-    <a href="#/trabajo-con-nosotros">Trabaja con nosotros</a>
+    <a href="#/trabajo-con-nosotros">Registrar servicio</a>
 </div>
 <div class="copy-right">
   <img
@@ -37,6 +37,6 @@ export function Footer() {
     </li>
   </ul>
 </div>
-`;
-  return footer;
+`
+  return footer
 }

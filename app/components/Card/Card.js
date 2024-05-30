@@ -6,12 +6,12 @@ import "../Card/Card.scss"
 
 //Create the container and add to main
 
-const main = document.createElement('section');
+const main = document.createElement('section')
 
 function createTitles(){
-    const sectionOne = document.createElement("section");
+    const sectionOne = document.createElement("section")
     sectionOne.className = "section-container m-5"
-    sectionOne.innerHTML = "";
+    sectionOne.innerHTML = ""
     return sectionOne
 }
 
@@ -25,9 +25,9 @@ function titles(){
     section.innerHTML += `
     <h1 class="title-services h1 text-capitalize display-3 text-center text-bold ">servicios</h1>
     <div id="content-button-service" class="d-grid gap-2 m-3 d-flex flex-wrap gap-2 justify-content-center">
-      <button class="btn btn-service fs-4" id="plomeria" type="button">Plomeria</button>
+      <button class="btn btn-service fs-4" id="plomeria" type="button">Plomería</button>
       <button class="btn btn-service fs-4" id="aseo" type="button">Aseo</button>
-      <button class="btn btn-service fs-4" id="peluqueria" type="button">Peluqueria</button>
+      <button class="btn btn-service fs-4" id="peluqueria" type="button">Peluquería</button>
       <button class="btn btn-service fs-4" id="construccion" type="button">Construcción</button>
       <button class="btn btn-service fs-4" id="electricidad" type="button">Electricidad</button>
     </div>
@@ -60,9 +60,9 @@ function servicesClick() {document.addEventListener("click", async (event) => {
 
 //This function will filter the workers by category 
 async function filter(id){
-       const response = await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers?category=${id}`);
-        const data = await response.json();
-        sectionTwo.innerHTML = "";
+       const response = await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers?category=${id}`)
+        const data = await response.json()
+        sectionTwo.innerHTML = ""
         data.forEach(worker => {
 
         sectionTwo.innerHTML+=`
@@ -84,18 +84,18 @@ servicesClick()
 // Create the cards section and add to the main
 
 function createCards() {
-    const sectionTwo = document.createElement("section");
+    const sectionTwo = document.createElement("section")
     sectionTwo.className = "section-container m-5 d-flex flex-wrap gap-5 justify-content-center"
-    sectionTwo.innerHTML = "";
+    sectionTwo.innerHTML = ""
     return sectionTwo
 }
 const sectionTwo = main.appendChild(createCards())
 
 // This function is responsible for create the cards in the section
 async function createCardWorker() {
-const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers");
-const data = await response.json(); 
-sectionTwo.innerHTML = "";
+const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")
+const data = await response.json()
+sectionTwo.innerHTML = ""
 data.forEach(worker => {
 
     sectionTwo.innerHTML+=`
@@ -120,7 +120,7 @@ createCardWorker()
 function listenerClick() {document.addEventListener("click", (event) => {
    
     if(event.target.className=="view-more"){
-        localStorage.setItem("id", event.target.id);
+        localStorage.setItem("id", event.target.id)
         
         
     }
@@ -131,8 +131,8 @@ listenerClick()
 // This function will export the content created
 
 export function serviceCards(){
-    const mainHtml = main;
-    return mainHtml;
+    const mainHtml = main
+    return mainHtml
 }
 
 serviceCards()
