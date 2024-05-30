@@ -1,19 +1,19 @@
 //Import the styles of module and alert js
-import { alertSmallSuccess } from "./Alerts"
-import "./Delete.scss"
+import { alertSmallSuccess } from "./Alerts";
+import "./Delete.scss";
+const CrudDeleteSection = document.createElement("section");
 
-const CrudDeleteSection = document.createElement('section')
 //Create a function implement the table on HTML
 function createTable() {
-    const table = document.createElement('article')
-    table.classList.add("container-fluid", "table-responsive")
-    table.innerHTML = ""
-    return table
+  const table = document.createElement("article");
+  table.classList.add("container-fluid", "table-responsive");
+  table.innerHTML = "";
+  return table;
 }
 
-const addTable = CrudDeleteSection.appendChild(createTable())
+const addTable = CrudDeleteSection.appendChild(createTable());
 function table() {
-    addTable.innerHTML = `
+  addTable.innerHTML = `
         <table class="table table-striped text-center align-middle table-hover">
             <thead>
                 <tr>
@@ -29,18 +29,21 @@ function table() {
         </table>
 
         <button class="log-out">Cerrar sesión</button>
-    `
+    `;
 }
 
-table()
+table();
 
 // Handle the database connection
 async function index() {
-    const response = await fetch("https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers")//Llamamos a los datos
-    const data = await response.json() //convert JSON to Javascript
-    tbody.innerHTML = ""
-    data.forEach(element => {
-        tbody.innerHTML += `
+  const response = await fetch(
+    "https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers"
+  ); //Llamamos a los datos
+  const data = await response.json(); //convert JSON to Javascript
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = "";
+  data.forEach((element) => {
+    tbody.innerHTML += `
             <td>${element.id}</td>
             <td>${element.name}</td>
             <td>${element.lastName}</td>
@@ -49,46 +52,50 @@ async function index() {
             <td>
                 <button type="button" data-id=${element.id} class="btn btn-danger">Delete</button>
             </td>
-        `
-    })
+        `;
+  });
 }
 
-index()
+index();
 
-CrudDeleteSection.addEventListener('click', async function (event) {
-    if (event.target.classList.contains("btn-danger")) { //we have to make sure that we are pressing the delete button
-        const id = event.target.getAttribute('data-id');//get the delete button id
-        await deleteItem(id)//send the id to the function in charge of deleting
-        await index()//get back to load the list
-    }
-})
+CrudDeleteSection.addEventListener("click", async function (event) {
+  if (event.target.classList.contains("btn-danger")) {
+    //we have to make sure that we are pressing the delete button
+    const id = event.target.getAttribute("data-id"); //get the delete button id
+    await deleteItem(id); //send the id to the function in charge of deleting
+    await index(); //get back to load the list
+  }
+});
 
 async function deleteItem(id) {
-    //program the function to delete the worker
-    const workerToDelete = {
-        id
-    } 
-    await fetch(`https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(workerToDelete)
-    })
-    alertSmallSuccess("Aliado eliminado exitosamente")
+  //program the function to delete the worker
+  const workerToDelete = {
+    id,
+  };
+  await fetch(
+    `https://55nafuq2d0.execute-api.us-east-2.amazonaws.com/desarrollo/workers`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(workerToDelete),
+    }
+  );
+  alertSmallSuccess("Aliado eliminado exitosamente");
 }
 
-export function globalDelete(){
-    const deleteHtml = CrudDeleteSection
-    return deleteHtml
+export function globalDelete() {
+  const deleteHtml = CrudDeleteSection;
+  return deleteHtml;
 }
 
 // ADD EVENT LISTENER to sing out
-CrudDeleteSection.addEventListener("click", (event)=>{
-    if(event.target.classList.contains("log-out")){
-        localStorage.removeItem('profile')
-        window.location.hash = ""
-    }
-})
+CrudDeleteSection.addEventListener("click", (event) => {
+  if (event.target.classList.contains("log-out")) {
+    localStorage.removeItem("profile");
+    window.location.hash = "";
+  }
+});
 
 globalDelete();
